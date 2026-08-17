@@ -1,0 +1,18 @@
+:root {
+  --background: #faf9f7;
+  --surface: #f1efec;
+  --surface-strong: #e5e2de;
+  --text-main: #303030;
+  --text-sub: #85827e;
+  --accent: #b7a99f;
+  --border: #e5e2de;
+  --dark: #303030;
+  --white: #ffffff;
+  --font-jp: 'Noto Sans JP', sans-serif;
+  --font-en: 'Inter', sans-serif;
+  --font-accent: 'Cormorant Garamond', serif;
+  --container-width: 1200px;
+  --section-gap: clamp(80px, 10vw, 128px);
+  --grid-gap: 32px;
+  --radius: 4px;
+}
