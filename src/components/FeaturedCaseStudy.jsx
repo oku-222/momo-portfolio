@@ -1,3 +1,5 @@
+import { assetPath } from '../utils/assetPath';
+
 function FeaturedCaseStudy({ works }) {
   const orbStation = works.find((work) => work.id === 1);
   const orbSocial = works.find((work) => work.id === 9);
@@ -10,10 +12,10 @@ function FeaturedCaseStudy({ works }) {
         <div className="case-study">
           <div className="case-study__visuals">
             <figure className="case-study__visual">
-              <img src={orbStation.image} alt="ORB STATION Web Design" loading="lazy" />
+              <img src={assetPath(orbStation.image)} alt="ORB STATION Web Design" loading="lazy" />
             </figure>
             <figure className="case-study__visual">
-              <img src={orbSocial.image} alt="ORB STATION Instagram Creative" loading="lazy" />
+              <img src={assetPath(orbSocial.image)} alt="ORB STATION Instagram Creative" loading="lazy" />
             </figure>
           </div>
           <div className="case-study__content">
