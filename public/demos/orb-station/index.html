@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 【SEO】検索結果に表示されるタイトルと説明文 -->
+    <title>音声療法サロン ORB STATION｜音声分析・音声療法・ボイスケア</title>
+    <meta name="description" content="ORB STATIONは、音声分析と音声療法を行う音声療法サロンです。音声診断、ボイスレッスン、音声療法士養成講座を通じて、声の悩みや表現をサポートします。">
+
+    <!-- 【訓練校用】制作中のため検索エンジンに載らないように設定 -->
+    <meta name="robots" content="noindex" />
+
+    <!-- 【デザイン】Google Fonts：見出し用の明朝体と本文用のゴシック体を読み込み -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- 【CSS】ライブラリ、リセット、メインスタイルの順番で読み込み -->
+    <link rel="stylesheet" href="./assets/css/lib/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- ① ヘッダー：ロゴ・電話番号・ナビゲーション -->
+<header class="header">
+  <div class="header__inner inner">
+    <!-- ロゴエリア -->
+    <div class="header__logo">
+      <a href="./index.html">ORB STATION</a>
+    </div>
+        
+        <!-- PC版のみ表示：信頼感を出すための電話番号エリア -->
+        <div class="header__contact-box visible-pc">
+          <p class="header__tel">📞 03-1234-5678</p>
+          <p class="header__time">受付 10:00〜18:00（火曜定休）</p>
+        </div>
+
+        <!-- ② グローバルメニュー：各セクションへのリンク（ページ内リンク） -->
+        <nav class="header__nav" aria-label="メインナビゲーション">
+          <ul class="header__list">
+            <!-- 間の「・」などはすべて削除します -->
+            <li><a href="#about">音声療法とは</a></li>
+            <li><a href="#service">サービス紹介</a></li>
+            <li><a href="#profile">代表紹介</a></li>
+            <li><a href="#voice">お客様の声</a></li>
+            <li><a href="#news">お知らせ</a></li>
+          </ul>
+          <a href="./contact/index.html" class="header__button">📅 予約する</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- スマホ用メニューボタン -->
+    <button class="drawer-icon js-menu-button" aria-label="メニューを開く">
+      <span class="drawer-icon__bar"></span>
+      <span class="drawer-icon__bar"></span>
+      <span class="drawer-icon__bar"></span>
+    </button>
+
+    <!-- スマホ用ドロワーメニュー（中身） -->
+    <div class="drawer js-drawer">
+      <div class="drawer__body">
+        <ul class="drawer__list">
+          <li><a href="#about">音声療法とは</a></li>
+          <li><a href="#service">サービス紹介</a></li>
+          <li><a href="#profile">代表紹介</a></li>
+          <li><a href="#voice">お客様の声</a></li>
+          <li><a href="./contact/index.html">予約・問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <main class="main">
+      <!-- ③ メインビジュアル：生成した3枚の画像をスライドさせます -->
+      <section class="first-view">
+        <div id="js-first-view-swiper" class="swiper first-view__swiper">
+          <div class="swiper-wrapper">
+            <!-- 画像パスは生成したファイル名（mv-01.jpg等）に合わせてください -->
+            <div class="swiper-slide first-view__image"><img src="./assets/img/mv-01.jpg" alt="癒やしのサロン空間"></div>
+            <div class="swiper-slide first-view__image"><img src="./assets/img/mv-02.jpg" alt="リラックスする女性"></div>
+            <div class="swiper-slide first-view__image"><img src="./assets/img/mv-03.jpg" alt="音の波紋イメージ"></div>
+          </div>
+        </div>
+        <div class="first-view__content">
+          <h1 class="first-view__eyebrow">音声療法サロン ORB STATION</h1>
+          <h2 class="first-view__catch">声を整えれば、<br />心と体も整う。</h2>
+          <p class="first-view__title">科学的な音声分析と音声療法で、<br />あなた本来の声と輝きを取り戻します。</p>
+          <div class="first-view__button">
+            <a href="./contact/index.html">初めての方へ</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ④ 音声療法とは：画像とテキストを横並びにして信頼感を演出 -->
+      <section id="about" class="about section">
+        <div class="inner">
+          <div class="about__layout">
+            <div class="about__image">
+              <img src="./assets/img/about-image.jpg" alt="音声療法の響きをイメージした波紋">
+            </div>
+            <div class="about__text-content">
+              <p class="section__eyebrow">ABOUT SOUND THERAPY</p>
+              <h2 class="section__title js-fade">音声療法とは</h2>
+              <p class="about__text">声はあなたの心身の状態を映し出す鏡です。当サロンでは、最新の分析技術と伝統的な音の癒やしを組み合わせ、あなたの「本当の声」を引き出します。<br><br>
+              科学的なデータに基づき、お一人おひとりの声の悩みを根本から解決へと導きます。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ⑤ サービス紹介：実写写真を4枚並べたカード形式 -->
+      <section class="concern section">
+        <div class="inner">
+          <div class="section__title-group js-fade">
+            <p class="section__eyebrow">YOUR CONCERNS</p>
+            <h2 class="section__title">このようなお悩みはありませんか</h2>
+            <p class="section__subtitle">声や音を通して、自分の状態を見つめ直したい方へ</p>
+          </div>
+          <div class="concern__container">
+            <article class="concern__item js-fade">
+              <h3 class="concern__title">声が出しにくい・詰まりが気になる</h3>
+              <p class="concern__text">声の出にくさや詰まりが気になり、声の状態を知りたい方。</p>
+            </article>
+            <article class="concern__item js-fade delay-200">
+              <h3 class="concern__title">人前で話すことに自信がない</h3>
+              <p class="concern__text">日常の話し声や、人に伝わる声の出し方を見直したい方。</p>
+            </article>
+            <article class="concern__item js-fade delay-400">
+              <h3 class="concern__title">ストレスや緊張で声が変わる</h3>
+              <p class="concern__text">声の変化をきっかけに、自分の心身の状態を見つめたい方。</p>
+            </article>
+            <article class="concern__item js-fade delay-600">
+              <h3 class="concern__title">自分らしく表現したい</h3>
+              <p class="concern__text">声を通して、表現やコミュニケーションをより豊かにしたい方。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="service" class="menu section" style="background-color: var(--color-sub);">
+        <div class="inner">
+          <p class="section__eyebrow section__eyebrow--center">OUR SERVICES</p>
+          <h2 class="section__title js-fade">音声療法のサービス紹介</h2>
+          <div class="commitment__container">
+            <article class="commitment-card js-fade">
+              <a class="commitment-card__link js-service-modal-trigger" href="./service/voice-analysis/index.html" data-service="voice-analysis" aria-haspopup="dialog">
+                <div class="commitment-card__image"><img src="./assets/img/tool-speaker.jpg" alt="音声診断"></div>
+                <h3 class="commitment-card__title">音声診断</h3>
+                <p class="commitment-card__text">独自の音声分析ソフトを使い、あなたの声の状態をグラフで可視化します。</p>
+                <span class="commitment-card__more">詳細を見る</span>
+              </a>
+            </article>
+            <article class="commitment-card js-fade delay-200">
+              <a class="commitment-card__link js-service-modal-trigger" href="./service/sound-therapy/index.html" data-service="sound-therapy" aria-haspopup="dialog">
+                <div class="commitment-card__image"><img src="./assets/img/tool-fork.jpg" alt="音声療法"></div>
+                <h3 class="commitment-card__title">音声療法</h3>
+                <p class="commitment-card__text">音叉（おんさ）やシンギングボウルの振動で、喉の緊張を根本から解消します。</p>
+                <span class="commitment-card__more">詳細を見る</span>
+              </a>
+            </article>
+            <article class="commitment-card js-fade delay-400">
+              <a class="commitment-card__link js-service-modal-trigger" href="./service/voice-lesson/index.html" data-service="voice-lesson" aria-haspopup="dialog">
+                <div class="commitment-card__image"><img src="./assets/img/profile-stage.jpg" alt="ボイスレッスン"></div>
+                <h3 class="commitment-card__title">ボイスレッスン</h3>
+                <p class="commitment-card__text">表現者としての経験に基づき、心に響く伝わる声の出し方をマンツーマンで指導します。</p>
+                <span class="commitment-card__more">詳細を見る</span>
+              </a>
+            </article>
+            <article class="commitment-card js-fade delay-600">
+              <a class="commitment-card__link js-service-modal-trigger" href="./service/voice-therapist-course/index.html" data-service="voice-therapist-course" aria-haspopup="dialog">
+                <div class="commitment-card__image"><img src="./assets/img/course-seminar.jpg" alt="養成講座のセミナー風景"></div>
+                <h3 class="commitment-card__title">養成講座</h3>
+                <p class="commitment-card__text">音声療法士を目指す方のための、理論と実践を網羅した専門教育プログラムです。</p>
+                <span class="commitment-card__more">詳細を見る</span>
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div class="service-modal" data-service-modal aria-hidden="true">
+        <div class="service-modal__backdrop" data-service-modal-close></div>
+        <section class="service-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="service-modal-title" tabindex="-1">
+          <button class="service-modal__close" type="button" data-service-modal-close aria-label="詳細ウィンドウを閉じる">×</button>
+          <p class="section__eyebrow">SERVICE DETAILS</p>
+          <h2 class="service-modal__title" id="service-modal-title"></h2>
+          <p class="service-modal__lead" data-service-modal-lead></p>
+          <div class="service-modal__body" data-service-modal-body></div>
+          <div class="service-modal__actions">
+            <a class="header__button header__button--outline" data-service-modal-detail href="#">詳しい内容を見る</a>
+            <a class="header__button" href="./contact/index.html">予約・相談する</a>
+          </div>
+        </section>
+      </div>
+
+<!-- ⑥ 代表紹介セクション -->
+      <section id="profile" class="profile section">
+        <div class="inner">
+          <p class="section__eyebrow section__eyebrow--center">ABOUT ORB STATION</p>
+          <h2 class="section__title js-fade">代表メッセージ</h2> <!-- ここにも js-fade 追加がおすすめ -->
+          <div class="profile-layout">
+            <div class="profile-image js-fade">
+              <img src="./assets/img/profile-salon.jpg" alt="代表：棚谷氏">
+            </div>
+            <!-- ★修正点：class="" の中に js-fade と delay-200 を入れました -->
+            <div class="profile-text js-fade delay-200">
+              <h3 class="profile-quote">「声を通して、人生をより豊かに調律するお手伝いをいたします」</h3>
+              <p>長年、声と音の可能性を追求してきました。現代社会でストレスを感じている多くの方々に、声が変わることで心も軽くなる体験をしていただきたい。舞台に立つ表現者としての経験と科学的な知見を組み合わせ、お一人おひとりに最適なセッションをご提案します。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ⑦ お客様の声 ＆ FAQ：実績の提示と疑問の解消 -->
+      <section id="voice" class="voice section" style="background-color: var(--color-sub);">
+        <div class="inner">
+          <div class="section__title-group js-fade">
+            <p class="section__eyebrow">VOICE & QUESTIONS</p>
+            <h2 class="voice__title">VOICE & FAQ</h2>
+            <p class="voice__subtitle">体験後の感想とよくある質問</p>
+          </div>
+
+          <!-- お客様の声（グリッド表示） -->
+          <div class="voice__container">
+            <article class="voice-item js-fade">
+              <time class="voice-item__date">2023.06.01</time>
+              <h3 class="voice-item__name">森永富美子さん（NLPトレーナー）</h3>
+              <p class="voice-item__text">棚谷さんからボイストレーニングを受けています。自分の声がこれほど変わるとは驚きでした...</p>
+            </article>
+            <article class="voice-item js-fade delay-200">
+              <time class="voice-item__date">2023.05.28</time>
+              <h3 class="voice-item__name">F・Nさん（女性）</h3>
+              <p class="voice-item__text">声で自分の深層心理がわかるのが興味深く、結果にも非常に思い当たることがありました。</p>
+            </article>
+            <article class="voice-item js-fade delay-400">
+              <time class="voice-item__date">2022.11.21</time>
+              <h3 class="voice-item__name">S・Iさん（女性）</h3>
+              <p class="voice-item__text">自分が思う以上に自分を抑圧していることがわかり、大きな収穫となりました。心からリラックスできます。</p>
+            </article>
+          </div>
+
+          <!-- FAQパーツ（アコーディオン形式） -->
+          <div class="faq__container">
+            <h3 class="faq__main-title">よくあるご質問</h3>
+            <div class="faq__list">
+              <details class="faq__item js-fade">
+                <summary class="faq__question">音声療法はどのような効果がありますか？</summary>
+                <p class="faq__answer">心身のリラックス効果に加え、喉の筋肉の緊張を解きほぐすことで本来の響きやすい声を取り戻すことができます。</p>
+              </details>
+              <details class="faq__item js-fade delay-200">
+                <summary class="faq__question">歌が苦手でもボイスレッスンは受けられますか？</summary>
+                <p class="faq__answer">はい。歌唱力の向上だけでなく「日常の話し声」や「自信を持って話すこと」を目的とした方も多く通われています。</p>
+              </details>
+              <details class="faq__item js-fade delay-400">
+                <summary class="faq__question">1回のセッション時間はどのくらいですか？</summary>
+                <p class="faq__answer">初回はカウンセリングと音声分析を含め約90分、2回目以降は約60分が目安となります。</p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ⑧ お知らせ・コラム：2カラムの別枠ボックス構成 -->
+      <section id="news" class="news section">
+        <div class="inner">
+          <p class="section__eyebrow section__eyebrow--center">JOURNAL</p>
+          <h2 class="section__title js-fade">お知らせ・コラム</h2>
+          <div class="news__grid">
+            <div class="news__box js-fade">
+              <div class="news__box-head">
+                <h3 class="news__box-title">お知らせ</h3>
+                <a href="./news/index.html" class="news__history-link">一覧を見る</a>
+              </div>
+              <a href="./news/detail/index.html" class="news__item">
+                <time class="news__date">2025.05.20</time>
+                <div class="news__item-title">セミナー開催：本来の自分に出会う声のワークショップ</div>
+              </a>
+              <a href="./news/index.html" class="news__item">
+                <time class="news__date">2025.05.01</time>
+                <div class="news__item-title">ゴールデンウィーク期間中の休業日について</div>
+              </a>
+            </div>
+            <div class="news__box js-fade delay-200">
+              <div class="news__box-head">
+                <h3 class="news__box-title">コラム</h3>
+                <a href="./news/index.html" class="news__history-link">一覧を見る</a>
+              </div>
+              <a href="./news/detail/index.html" class="news__item">
+                <time class="news__date">2025.04.18</time>
+                <div class="news__item-title">声の不調とストレスの関係について：喉の詰まりを解消するヒント</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ⑨ CTA：2つのボックス（お問い合わせ／ネット予約） -->
+      <section id="reserve" class="cta section">
+        <div class="inner">
+          <div class="cta__grid">
+            <div class="cta__box js-fade">
+              <h3 class="cta__box-title">音声療法について知る</h3>
+              <p class="cta__box-text">音声療法の考え方や<br>サービス内容をご案内します</p>
+              <a href="#about" class="header__button header__button--outline">音声療法とは</a>
+            </div>
+            <div class="cta__box cta__box--main js-fade delay-200">
+              <h3 class="cta__box-title">予約・相談する</h3>
+              <p class="cta__box-text">セッション・講座についての<br>ご相談やご予約はこちらから</p>
+              <a href="./contact/index.html" class="header__button">予約・相談する</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ⑩ フッター -->
+    <footer class="footer">
+      <div class="footer__logo">ORB STATION</div>
+      <div class="footer__address">〒000-0000 東京都新宿区◯◯町 0-0-0</div>
+      <div class="footer__hours">営業時間: 10:00〜18:00 (火曜定休)</div>
+      <div class="footer__copyright">&copy; 2025 ORB STATION All Rights Reserved.</div>
+    </footer>
+
+    <!-- トップへ戻るボタン：生成したアイコン画像を使用 -->
+    <a href="#" class="page-top js-page-top">
+      <img src="./assets/img/page-top.png" alt="トップへ戻る" width="48" height="48" />
+    </a>
+
+    <!-- JS読み込み：必ず最後に -->
+    <script src="./assets/js/lib/swiper-bundle.min.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
+  </body>
+</html>

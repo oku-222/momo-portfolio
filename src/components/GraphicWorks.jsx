@@ -5,8 +5,8 @@ function GraphicWorks({ works }) {
     <section className="section" id="graphic">
       <div className="container">
         <p className="eyebrow">Graphic / Banner</p>
-        <h2 className="section-heading">Graphic / Banner Design</h2>
-        <div className="works-grid works-grid--two">
+        <h2 className="section-heading">Graphic / Banner Design（AI Creative）</h2>
+        <div className="works-grid works-grid--two works-grid--graphic">
           {works.map((work) => (
             <WorkCard work={work} variant="work-card--banner" key={work.id} />
           ))}

@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="robots" content="noindex" />
+
+    <title>うちの子アート制作スタジオ | 世界にひとつ、うちの子だけのアート。</title>
+    <meta
+      name="description"
+      content="大切なペットの『その子らしさ』を表現したオーダーメイドアートを制作するスタジオです。丁寧なヒアリングとデザインで、お部屋に飾りたくなる一枚を仕立てます。"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaisei+Opti&family=Noto+Sans+JP:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="icon" href="./assets/img/favicon.ico">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__wrap">
+        <div class="header__logo">
+          <img src="./assets/img/logo.png" alt="うちの子 Art Studio.">
+        </div>
+        <button
+          type="button"
+          id="js-button-drawer"
+          class="header__menu-button menu-button"
+          aria-label="メニューを開く"
+          aria-expanded="false"
+          aria-controls="js-drawer"
+        >
+          <span class="menu-button__bar"></span>
+          <span class="menu-button__bar"></span>
+          <span class="menu-button__bar"></span>
+        </button>
+        <div id="js-drawer" class="header__contents">
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__list-item">
+                <a href="#about" class="header__link">About</a>
+              </li>
+              <li class="header__list-item">
+                <a href="#works" class="header__link">Works</a>
+              </li>
+              <li class="header__list-item">
+                <a href="#service" class="header__link">Service</a>
+              </li>
+              <li class="header__list-item">
+                <a href="#message" class="header__link">Message</a>
+              </li>
+              <li class="header__list-item">
+                <a href="#contact" class="header__link">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+<main class="main">
+  <!-- hero全体を囲む -->
+  <div class="hero">
+    <!-- 画像を重ねて表示するエリア -->
+    <div class="hero__image">
+      <img src="./assets/img/main01.png" alt="メイン画像1" class="hero__img is-active">
+      <img src="./assets/img/main02.png" alt="メイン画像2" class="hero__img">
+      <img src="./assets/img/main03.png" alt="メイン画像3" class="hero__img">
+        <!-- ここに追加 -->
+      <img src="./assets/img/main04.png" alt="メイン画像4" class="hero__img">
+      <img src="./assets/img/main05.png" alt="メイン画像5" class="hero__img">
+    </div>
+    <!-- 文字を画像の上に重ねる -->
+    <div class="hero__contents">
+      <hgroup class="hero__heading-group">
+        <h1 class="hero__title">世界にひとつ、<br>うちの子だけのアート。</h1>
+        <p class="hero__description">
+          丁寧なヒアリングとデザインで、<br />
+          大切な家族であるペットの『その子らしさ』を表現した<br />オーダーメイドのアートを制作します。
+        </p>
+      </hgroup>
+    </div>
+  </div>
+
+      <section id="about" class="about section">
+        <div class="about__inner inner">
+          <div class="about__wrap">
+            <div class="about__image">
+              <img
+                src="./assets/img/about-image01.png"
+                alt="デザイナーの作業風景・プロフィール写真"
+                width="600"
+                height="600"
+                loading="lazy"
+              />
+            </div>
+            <div class="about__text-wrap">
+              <hgroup class="about__heading-group section__heading-group">
+                <h2 class="about__title section__title">About -</h2>
+                <p class="about__text section__text">私について</p>
+              </hgroup>
+              <p class="about__description">
+                「うちの子」の輝きを、暮らしを彩るアートへ。写真の枠を超え、いつまでも眺めていたくなる一枚を仕立てる専門的なデザインを提供しています。
+              </p>
+              <p class="about__description">
+                オーナー様の『うちの子への愛おしさ』を大切にし、それぞれの個性に響く心地よいデザインを共に創り上げることを大切にしています。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="works" class="works section">
+        <div class="works__inner inner">
+          <hgroup class="works__heading-group section__heading-group">
+            <h2 class="works__title section__title">Works -</h2>
+            <p class="works__text section__text">実績紹介</p>
+          </hgroup>
+          <p class="works__lead section__lead">
+            オーナー様のご要望に合わせた雰囲気づくりと、ペットの魅力が引き立つデザインを心がけています。これまでに制作した『うちの子アート』の一部をご紹介します。
+          </p>
+          <div class="works__contents section__contents">
+            <ul class="works__list">
+              <li class="works__list-item works-item">
+                <div class="works-item__image">
+                  <img
+                    src="./assets/img/works01.png"
+                    alt="水彩画風ポートレート"
+                    width="480"
+                    height="320"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 class="works-item__name">水彩画風ポートレート</h3>
+              </li>
+              <li class="works__list-item works-item">
+                <div class="works-item__image">
+                  <img
+                    src="./assets/img/works02.png"
+                    alt="クラシック・油絵風"
+                    width="480"
+                    height="320"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 class="works-item__name">カレンダー制作</h3>
+              </li>
+              <li class="works__list-item works-item">
+                <div class="works-item__image">
+                  <img
+                    src="./assets/img/works03.png"
+                    alt="SNS・ポスター風"
+                    width="480"
+                    height="320"
+                    loading="lazy"
+                  />
+                </div>
+                <h3 class="works-item__name">SNS・ポスター風</h3>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+<section id="service" class="service section">
+        <div class="service__inner inner">
+          <hgroup class="service__heading-group section__heading-group">
+            <h2 class="service__title section__title">Service -</h2>
+            <p class="service__text section__text">できること</p>
+          </hgroup>
+          <div class="service__contents section__contents">
+            <ul class="service__list">
+              <!-- 1. オーダーメイドアート制作 -->
+              <li class="service__list-item service-item">
+                <div class="service-item__image">
+                  <img src="./assets/img/service01.png" alt="オーダーメイドアート制作のイメージ" width="400" height="400" loading="lazy">
+                </div>
+                <h3 class="service-item__name">オーダーメイドアート制作</h3>
+                <p class="service-item__description">
+                  お気に入りの写真をベースに、ご希望のタッチ（水彩、油絵、モダン）に合わせたデジタルアートを制作します。
+                </p>
+              </li>
+              <!-- 2. グッズ展開・レタッチ -->
+              <li class="service__list-item service-item">
+                <div class="service-item__image">
+                  <img src="./assets/img/service02.png" alt="グッズ展開・レタッチのイメージ" width="400" height="400" loading="lazy">
+                </div>
+                <h3 class="service-item__name">グッズ展開・レタッチ</h3>
+                <p class="service-item__description">
+                  印刷に最適な高解像度へのレタッチや、キャンバスプリント、オリジナルグッズへの展開用データを作成します。
+                </p>
+              </li>
+              <!-- 3. SNS用クリエイティブ -->
+              <li class="service__list-item service-item">
+                <div class="service-item__image">
+                  <img src="./assets/img/service03.png" alt="SNS用クリエイティブのイメージ" width="400" height="400" loading="lazy">
+                </div>
+                <h3 class="service-item__name">SNS用クリエイティブ</h3>
+                <p class="service-item__description">
+                  InstagramやThreadsのアイコン、お誕生日用の記念画像、フォロワー様へ感謝を伝える特別な1枚をデザイン。
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+<!-- ↓ ここから Message セクションを追加 -->
+      <section id="message" class="message section">
+        <div class="message__inner inner">
+          <div class="message__wrap">
+            <div class="message__image">
+              <img
+                src="./assets/img/message-image01.png"
+                alt="ペットへの愛おしさを込めたアート制作のイメージ画像"
+                width="600"
+                height="600"
+                loading="lazy"
+              />
+            </div>
+            <div class="message__text-wrap">
+              <hgroup class="message__heading-group section__heading-group">
+                <h2 class="message__title section__title">Message -</h2>
+                <p class="message__text section__text">日常のひとコマを、一生モノの愛おしい思い出に</p>
+              </hgroup>
+              <p class="message__description">
+                『うちの子』のアートを作ることは、家族との大切な思い出を形にして、暮らしの中で大切に育てることだと思います。<br />
+                オーナー様のペットへの想いに寄り添い、二人三脚で素敵な1枚を作り上げたいと考えています。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ↑ ここまで Message セクション -->      
+      
+    </main>
+
+     <!-- 【追加】ここからモーダルウィンドウ -->
+    <div id="js-modal" class="modal" aria-hidden="true">
+      <div class="modal__overlay js-modal-close"></div>
+      <div class="modal__content">
+        <button type="button" class="modal__close-button js-modal-close" aria-label="閉じる">✕</button>
+        <img id="js-modal-img" src="" alt="詳細画像">
+        <p id="js-modal-text"></p>
+      </div>
+    </div>
+    <!-- 【追加】ここまでモーダルウィンドウ -->
+
+
+<footer class="footer">
+  <div class="footer__wrapper">
+
+    <!-- Contact -->
+    <div id="contact" class="footer__contact contact">
+      <div class="contact__text-wrap section__heading-group">
+        <div class="contact__title section__title">Contact -</div>
+        <p class="contact__text section__text">お問い合わせ</p>
+      </div>
+      <p class="contact__lead">
+        うちの子の写真のご相談、オーダーはこちらから<br>お気軽にお問い合わせください。
+      </p>
+      <!-- ★ href="" の中にGoogleフォームのURLを入れてください -->
+      
+      <a href="https://forms.gle/XXXXXXXXXXXXXXXXXX"
+        target="_blank"
+        rel="noopener"
+        class="contact__link"
+      >
+        お問い合わせはこちら →
+      </a>
+    </div>
+
+    <!-- 区切り線 -->
+    <div class="footer__divider"></div>
+
+    <!-- SNS -->
+    <div class="footer__sns sns">
+      <div class="sns__text-wrap section__heading-group">
+        <div class="sns__title section__title">SNS -</div>
+        <p class="sns__text section__text">フォローはこちら</p>
+      </div>
+      <div class="sns__icons">
+
+        <!-- LINE ★ href="" にLINE公式アカウントのURLを入れてください -->
+        <a href="https://line.me/R/ti/p/XXXXXXXXXX"
+           target="_blank" rel="noopener"
+           class="sns__icon-link sns__icon-link--line"
+           aria-label="LINEでフォロー">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M19.365 9.863c.349 0 .63.285.63.631 0 .345-.281.63-.63.63H17.61v1.125h1.755c.349 0 .63.283.63.63 0 .344-.281.629-.63.629h-2.386c-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63h2.386c.346 0 .627.285.627.63 0 .349-.281.63-.63.63H17.61v1.125h1.755zm-3.855 3.016c0 .27-.174.51-.432.596-.064.021-.133.031-.199.031-.211 0-.391-.09-.51-.25l-2.443-3.317v2.94c0 .344-.279.629-.631.629-.346 0-.626-.285-.626-.629V8.108c0-.27.173-.51.43-.595.06-.023.136-.033.194-.033.195 0 .375.104.495.254l2.462 3.33V8.108c0-.345.282-.63.63-.63.345 0 .63.285.63.63v4.771zm-5.741 0c0 .344-.282.629-.631.629-.345 0-.627-.285-.627-.629V8.108c0-.345.282-.63.63-.63.346 0 .628.285.628.63v4.771zm-2.466.629H4.917c-.345 0-.63-.285-.63-.629V8.108c0-.345.285-.63.63-.63.348 0 .63.285.63.63v4.141h1.756c.348 0 .629.283.629.63 0 .344-.282.629-.629.629M24 10.314C24 4.943 18.615.572 12 .572S0 4.943 0 10.314c0 4.811 4.27 8.842 10.035 9.608.391.082.923.258 1.058.59.12.301.079.766.038 1.08l-.164 1.02c-.045.301-.24 1.186 1.049.645 1.291-.539 6.916-4.078 9.436-6.975C23.176 14.393 24 12.458 24 10.314"/>
+          </svg>
+          <span class="sns__icon-label">LINE</span>
+        </a>
+
+        <!-- Instagram ★ href="" にInstagramのURLを入れてください -->
+        <a href="https://www.instagram.com/XXXXXXXXXX"
+           target="_blank" rel="noopener"
+           class="sns__icon-link sns__icon-link--instagram"
+           aria-label="Instagramでフォロー">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          <span class="sns__icon-label">Instagram</span>
+        </a>
+
+        <!-- X ★ href="" にXのURLを入れてください -->
+        <a href="https://x.com/XXXXXXXXXX"
+           target="_blank" rel="noopener"
+           class="sns__icon-link sns__icon-link--x"
+           aria-label="Xでフォロー">
+          <svg width="22" height="22" viewBox="0 0 1200 1227" fill="currentColor">
+            <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/>
+          </svg>
+          <span class="sns__icon-label">X</span>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer__copylight">
+    <small>&copy; うちの子アート制作スタジオ All rights reserved.</small>
+  </div>
+</footer>
+
+    <script src="./assets/js/script.js" defer></script>
+  </body>
+</html>

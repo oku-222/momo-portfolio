@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 【解説：タイトル】記事のタイトルを最初に入れ、サイト名を後ろに入れます（SEOの基本です） -->
+    <title>声の不調とストレスの関係について | ORB STATION</title>
+    <meta name="description" content="声の詰まりや出にくさと、ストレスの関係について科学的な視点から解説します。">
+
+    <!-- noindex：制作中のため検索エンジンに登録されないようにします -->
+    <meta name="robots" content="noindex" />
+
+    <!-- google-fonts：見出し用の明朝体（Noto Serif JP）と本文用のゴシック体（Noto Sans JP） -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- 【解説：相対パス】
+         news/detail/ の中にいるので、「../../」と書くことで2つ上の階層（ルート）にある assets を見に行きます。
+    -->
+    <link rel="stylesheet" href="../../assets/css/reset.css" />
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+  </head>
+  <body>
+    <!-- ① ヘッダー：共通パーツ（全リンクに ../../ を付与） -->
+    <header class="header">
+      <div class="header__inner inner">
+        <h1 class="header__logo">
+          <a href="../../index.html">ORB STATION</a>
+        </h1>
+        
+        <div class="header__contact-box visible-pc">
+          <p class="header__tel">📞 03-1234-5678</p>
+          <p class="header__time">受付 10:00〜18:00（火曜定休）</p>
+        </div>
+
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li><a href="../../index.html#about">音声療法とは</a></li>
+            <li><a href="../../index.html#service">サービス紹介</a></li>
+            <li><a href="../../index.html#profile">代表紹介</a></li>
+            <li><a href="../../index.html#voice">お客様の声</a></li>
+            <!-- 1つ上の階層が一覧ページなので「../index.html」になります -->
+            <li><a href="../index.html">お知らせ</a></li>
+          </ul>
+          <a href="../../contact/index.html" class="header__button">📅 予約する</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- SP用メニューボタン -->
+    <button class="drawer-icon js-menu-button">
+      <span class="drawer-icon__bar"></span>
+      <span class="drawer-icon__bar"></span>
+      <span class="drawer-icon__bar"></span>
+    </button>
+
+    <!-- SP用ドロワー -->
+    <div role="navigation" class="drawer js-drawer">
+      <div class="drawer__body">
+        <ul class="drawer__list">
+          <li><a href="../../index.html">トップ</a></li>
+          <li><a href="../../index.html#about">音声療法とは</a></li>
+          <li><a href="../index.html">お知らせ一覧</a></li>
+          <li><a href="../../contact/index.html">予約・問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <main class="main">
+      <!-- 下層ページ共通のメインビジュアル -->
+      <div class="lower-first-view">
+        <div class="lower-first-view__title">コラム ・ お知らせ</div>
+      </div>
+
+      <!-- パンくずリスト：TOP > お知らせ一覧 > 記事タイトル -->
+      <div class="breadcrumb">
+        <div class="breadcrumb__inner inner">
+          <div class="breadcrumb__body">
+            <span><a href="../../index.html"><span>TOP</span></a></span>
+            <span class="gt">&gt;</span>
+            <span><a href="../index.html"><span>お知らせ一覧</span></a></span>
+            <span class="gt">&gt;</span>
+            <span><span>声の不調とストレスの関係</span></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 記事詳細セクション -->
+      <section class="lower-news">
+        <div class="lower-news__inner inner">
+          <article class="entry">
+            <!-- 記事のメインタイトル（h1は1ページに1回だけ使います） -->
+            <h1 class="entry__title">【コラム】声の不調とストレスの関係：声から心を整える方法</h1>
+            
+            <!-- 投稿日 -->
+            <time datetime="2025-04-18" class="entry__published">2025.04.18</time>
+            
+            <!-- 【解説：記事本文エリア】
+                 ここには style.css で設定した「見出しデザイン」が反映されるようにクラスを付けています。
+            -->
+            <div class="entry__body entry-content">
+              <p>
+                「大事なプレゼンの前に声が震える」「喉に何かが詰まっているような違和感がある」……。これらは単なる喉の不調ではなく、心が発しているサインかもしれません。
+              </p>
+              
+              <h2>1. なぜストレスで声が変わるのか？</h2>
+              <p>
+                喉の周りには、感情を司る「自律神経」と深く関わる繊細な筋肉が集中しています。過度なストレスを感じると、これらの筋肉が緊張し、声帯の正常な動きを妨げてしまうのです。
+              </p>
+              
+              <h2>2. 科学的な音声分析（波形診断）</h2>
+              <p>
+                ORB STATIONでは、あなたの声を周波数レベルで分析します。どの音域に緊張が出ているかを可視化することで、自分でも気づいていなかったストレスの状態を知ることができます。
+              </p>
+              
+              <h3>音声療法（サウンドセラピー）のアプローチ</h3>
+              <p>
+                分析結果に基づき、特定の周波数を用いた音叉（おんさ）やシンギングボウルの振動を体感していただきます。物理的な振動が、喉の奥にある深い緊張を「調律」するように解きほぐしていきます。
+              </p>
+              
+              <!-- 重要な文章を強調する strong タグ -->
+              <p>
+                <strong>声が変われば、心も変わります。</strong> 本来の響きを取り戻すことで、日々のコミュニケーションが驚くほど楽になる体験をしてみませんか？
+              </p>
+
+              <p>
+                詳細は <a href="../../index.html#service">サービス紹介ページ</a> をご覧いただくか、お気軽に <a href="../../contact/index.html">お問い合わせ</a> ください。
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <!-- ⑨ フッター -->
+    <footer class="footer">
+      <div class="footer__logo">ORB STATION</div>
+      <div class="footer__address">〒000-0000 東京都新宿区◯◯町 0-0-0</div>
+      <div class="footer__hours">営業時間: 10:00〜18:00 (火曜定休)</div>
+      <div class="footer__copyright">
+        &copy; 2025 ORB STATION All Rights Reserved.
+      </div>
+    </footer>
+
+    <!-- トップへ戻るボタン：パスを ../../assets/... に変更 -->
+    <a href="#" class="page-top js-page-top">
+      <img src="../../assets/img/page-top.png" alt="トップへ戻る" width="48" height="48" />
+    </a>
+
+    <!-- JavaScript：パスに注意 -->
+    <script src="../../assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="../../assets/js/script.js"></script>
+  </body>
+</html>

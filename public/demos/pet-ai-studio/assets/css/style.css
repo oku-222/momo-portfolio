@@ -1,0 +1,921 @@
+@charset "UTF-8";
+
+/* はんなり明朝を読み込み */
+@import url('https://fonts.googleapis.com/earlyaccess/hannari.css');
+
+/* ========================================================================
+//  variables - 変数
+//  テーマ: ハイドランジアブルー × パールホワイト
+//  アジサイの青・コーンフラワーブルー・クリームホワイトをベースに構成
+======================================================================== */
+:where(:root) {
+  --color-white: #fff;
+  --color-black: #000;
+
+  /* テキスト・グレー系 → ディープブルー系に置換 */
+  --color-gray-800: #2c4e7a;        /* メインテキスト：深いコバルトブルー */
+  --color-gray-500: #4a72a8;        /* Contact背景・ミッドブルー */
+  --color-gray-400: #9ab4d8;        /* ミュートテキスト：ライトブルー */
+  --color-gray-50:  #dceaf7;        /* セクション背景：パールブルー */
+
+  /* ダークカラー → ディープネイビーブルーに置換 */
+  --color-dark-800: #1e3a6e;        /* ヘッダー・フッターSNS背景 */
+
+  /* アクセント */
+  --color-accent:   #6b8fc9;        /* コーンフラワーブルー */
+  --color-accent-light: #9ab4d8;    /* ライトブルー（ホバー等） */
+
+  /* ベース背景（全体） */
+  --color-bg-base:  #f0f6fc;        /* 極薄パールブルーホワイト */
+
+  --color-text: var(--color-gray-800);
+
+  /* Z-index Layers */
+  --z-loading:  300;
+  --z-modal:    100;
+  --z-drawer:    40;
+  --z-floating:  30;
+  --z-header:    20;
+  --z-footer:    10;
+  --z-default:    1;
+}
+
+/* ========================================================================
+//  base
+======================================================================== */
+html {
+  scroll-behavior: smooth;
+  font-family: "Noto Sans JP", sans-serif;
+  scroll-padding-block-start: 2.5rlh;
+  background-color: var(--color-bg-base);
+
+  @media (768px <= width) {
+    scroll-padding-block-start: calc(80 / 24 * 1rlh);
+  }
+}
+
+body {
+  color: var(--color-text);
+  background-color: var(--color-bg-base);
+  font-family: 'Hannari', serif; /* Noto Sans JP から変更しました */
+
+  &.is-fixed {
+    overflow: hidden;
+  }
+}
+
+
+button {
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+
+  &:focus-visible {
+    outline: 1px solid var(--color-accent);
+  }
+}
+
+/* ========================================================================
+//  layout
+======================================================================== */
+.inner {
+  max-inline-size: 640px;
+  padding-inline: 32px;
+  margin-inline: auto;
+
+  @media (768px <= width) {
+    box-sizing: unset;
+    max-inline-size: 880px;
+  }
+}
+
+/* ========================================================================
+//  component - 共通パーツ
+======================================================================== */
+.button {
+  --_button-color: currentcolor;
+  --_button-border-width: 1px;
+
+  display: inline flex;
+  column-gap: 0.625rem;
+  inline-size: min(10rem, 100%);
+  padding-block: 0.25rlh;
+  padding-inline: 24px 10px;
+  color: var(--_button-color);
+  transition:
+    background 0.3s,
+    color 0.3s,
+    opacity 0.3s,
+    border 0.3s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--color-dark-800);
+      background-color: var(--color-bg-base);
+    }
+  }
+
+  &[data-variant="contained"] {
+    --_button-color: var(--color-dark-800);
+    background-color: var(--color-bg-base);
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &[data-variant="outlined"] {
+    padding-block: calc(0.25rlh - var(--_button-border-width));
+    border: var(--_button-border-width) solid currentcolor;
+
+    @media (any-hover: hover) {
+      &:hover {
+        border: var(--_button-border-width) solid transparent;
+      }
+    }
+  }
+}
+
+.button__icon {
+  svg {
+    inline-size: 1.25rem;
+  }
+
+  path {
+    fill: currentcolor;
+  }
+}
+
+.button__text {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+/* ========================================================================
+//  section - 共通
+======================================================================== */
+.section {
+  padding-block: 2rlh;
+}
+
+.section__heading-group {
+  & + * {
+    margin-block-start: calc(32 / 24 * 1rlh);
+
+    @media (768px <= width) {
+      margin-block-start: 1rem;
+    }
+  }
+}
+
+.section__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-dark-800);
+
+  @media (768px <= width) {
+    font-size: 3.375rem;
+  }
+
+  @media (1024px <= width) {
+    font-size: 3.75rem;
+  }
+}
+
+.section__text {
+  font-size: calc(11 / 16 * 1rem);
+  font-weight: 700;
+  color: var(--color-accent);        /* コーンフラワーブルーでアクセント */
+  letter-spacing: 0.08em;
+}
+
+.section__lead {
+  line-height: 1.6;
+  color: var(--color-gray-800);
+}
+
+.section__contents {
+  margin-block-start: 2.5rem;
+}
+
+/* ========================================================================
+//  header
+======================================================================== */
+.header {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline: 0;
+  z-index: var(--z-header);
+  color: var(--color-white);
+  background-color: var(--color-dark-800);   /* ディープネイビーブルー */
+  border-block-end: 1px solid rgba(154, 180, 216, 0.3); /* ライトブルーの細線 */
+}
+
+/* header__wrap を調整して高さをロゴに合わせる */
+.header__wrap {
+  position: relative;
+  display: flex; /* block flex から修正 */
+  align-items: center;
+  justify-content: space-between;
+  block-size: 50px; /* スマホ時のヘッダー高さを少し広めに固定 */
+  padding-inline: max(16px, 5%);
+
+  @media (768px <= width) {
+    block-size: 90px; /* PC時のヘッダー高さを調整 */
+  }
+}
+
+
+/* ========================================================================
+//  header logo
+======================================================================== */
+/* ロゴのサイズを調整 */
+.header__logo img {
+  display: block;
+  height: 40px; /* スマホ時のロゴ高さ */
+  width: auto;
+  object-fit: contain;
+}
+
+@media (768px <= width) {
+  .header__logo img {
+    height: 65px;      /* ← 90px から縮小 */
+    max-width: 260px;  /* ← 最大幅を追加（これ以上横に広がらない）*/
+  }
+}
+
+.header__menu-button {
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-end: 16px;
+  translate: 0 -50%;
+  background-color: transparent;
+  border: none;
+}
+
+.header__contents {
+  position: absolute;
+  inset-block-start: 50px;             /* ← スマホヘッダー高さに合わせる */
+  inset-inline: 0;
+  block-size: 0;
+  overflow-y: hidden;
+  background-color: var(--color-dark-800);
+  transition: block-size 0.5s ease;
+
+  &.is-open {
+    block-size: calc(100svb - 50px);   /* ← 同じく50pxに合わせる */
+    overflow-y: auto;
+  }
+
+  @media (768px <= width) {
+    position: revert;
+    block-size: revert;
+  }
+}
+
+.header__nav {
+  padding-block: 40px;
+
+  @media (768px <= width) {
+    padding-block: revert;
+  }
+}
+
+.header__list {
+  @media (768px <= width) {
+    display: block flex;
+    gap: 2rem;
+  }
+}
+
+.header__list-item {
+  text-align: center;
+}
+
+.header__link {
+  display: block flow;
+  padding-block: 1rlh;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-gray-400);     /* ライトブルー */
+  transition: color 0.3s, opacity 0.3s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--color-white);
+      opacity: 1;
+    }
+  }
+
+  @media (768px <= width) {
+    padding-block: 0;
+  }
+}
+
+.menu-button {
+  display: block flex;
+  flex-direction: column;
+  justify-content: space-between;
+  inline-size: 30px;
+  block-size: 26px;
+  border: none;
+
+  &:focus-visible {
+    outline: 1px solid var(--color-accent);
+  }
+
+  @media (768px <= width) {
+    display: none;
+  }
+}
+
+.menu-button__bar {
+  inline-size: 100%;
+  block-size: 4px;
+  background-color: var(--color-gray-400);   /* ライトブルー */
+  border-radius: calc(1px / 0);
+  transition:
+    translate 0.5s ease,
+    rotate 0.5s ease,
+    opacity 0.5s ease;
+
+  .is-checked &:first-of-type {
+    rotate: 225deg;
+    translate: 0 calc((26px - 4px / 2 * 2) / 2);
+  }
+
+  .is-checked &:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .is-checked &:last-of-type {
+    rotate: -225deg;
+    translate: 0 calc((26px - 4px / 2 * 2) / 2 * -1);
+  }
+}
+
+/* ========================================================================
+//  main
+======================================================================== */
+.main {
+  padding-block-start: 50px;   /* ← スマホヘッダー高さに合わせる */
+
+  @media (768px <= width) {
+    padding-block-start: 90px; /* ← PCヘッダー高さに合わせる */
+  }
+}
+
+/* ========================================================================
+//  hero - スライドショー用に修正
+======================================================================== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 550px; /* 固定高さを維持 */
+  overflow: hidden;
+}
+
+.hero__image {
+  position: absolute; /* 親(hero)に対して絶対配置 */
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out; /* ふんわり切り替わるアニメーション */
+}
+
+.hero__img.is-active {
+  opacity: 1; /* 現在の画像を表示 */
+}
+
+/* contents（テキスト部分）の重なり順を確保 */
+.hero__contents {
+  position: absolute;
+  inset-block-end: 26px;
+  inset-inline: 0;
+  min-height: 209px;
+  padding-block: calc(32 / 24 * 1rlh);
+  padding-inline: max(32px, 5%);
+  color: var(--color-white);
+  /* ディープネイビー半透明オーバーレイ */
+  background-color: rgb(30 58 110 / 80%);
+  border-block-start: 1px solid rgba(154, 180, 216, 0.4); 
+  z-index: 10; /* 画像より上に配置 */
+
+  @media (768px <= width) {
+    inset-block-end: 100px;
+    max-inline-size: calc(600 / 16 * 1rem);
+    min-height: 190px;
+    padding-block-start: 1rlh;
+    padding-inline: min(8.4%, 48px) 16px;
+  }
+}
+
+/* 「世界にひとつ、うちの子だけのアート」をKaisei Opti フォントに修正 */
+.hero__title {
+  margin-block: unset;
+  font-family: "Kaisei Opti", serif;  /* これを確実に設定 */
+  font-size: 2.125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-white);
+
+  @media (768px <= width) {
+    font-size: 2.5rem;
+  }
+}
+
+.hero__description {
+  margin-block-start: 0.5rlh;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: var(--color-gray-400);     /* ライトブルー */
+}
+
+/* ========================================================================
+//  about
+======================================================================== */
+.about {
+  background-color: var(--color-bg-base);
+}
+
+.about__wrap {
+  @media (768px <= width) {
+    display: flex;
+    flex-direction: row-reverse;
+    column-gap: 4.5%;
+  }
+}
+
+.about__image {
+  img {
+    box-shadow: 0 4px 20px 0 rgb(30 58 110 / 12%);
+    border-radius: 4px;
+  }
+}
+
+.about__text-wrap {
+  margin-block-start: calc(32 / 24 * 1rlh);
+
+  @media (768px <= width) {
+    margin-block-start: revert;
+  }
+}
+
+.about__description {
+  line-height: 1.8;
+  color: var(--color-gray-800);
+
+  & + & {
+    margin-block-start: 1lh;
+  }
+}
+
+/* ========================================================================
+//  works
+======================================================================== */
+.works {
+  background-color: var(--color-gray-50);   /* パールブルー */
+}
+
+.works__list {
+  @media (768px <= width) {
+    display: block grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8%;
+  }
+}
+
+.works__list-item {
+  & + & {
+    margin-block-start: 2.5rem;
+
+    @media (768px <= width) {
+      margin-block-start: revert;
+    }
+  }
+}
+
+/* 既存の .works-item__image の部分を以下のように修正・追記 */
+.works-item__image {
+  cursor: pointer;      /* クリックできることを示すカーソルに変更 */
+  transition: opacity 0.3s;
+}
+
+.works-item__image:hover {
+  opacity: 0.8;         /* ホバー時に少し透明にして反応を表現 */
+}
+
+.works-item__image img {
+  inline-size: 100%;
+  box-shadow: 0 4px 20px 0 rgb(30 58 110 / 12%);
+  border-radius: 4px;
+}
+
+.works-item__name {
+  margin-block-start: 0.5rlh;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-dark-800);
+}
+
+.works-item__link {
+  display: inline flow-root;
+  margin-block-start: 0.25rlh;
+  font-size: 0.875rem;
+  text-decoration-line: revert;
+  color: var(--color-accent);       /* コーンフラワーブルー */
+  transition: color 0.3s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--color-dark-800);
+    }
+  }
+}
+
+/* ========================================================================
+//  service
+======================================================================== */
+.service {
+  background-color: var(--color-bg-base);
+}
+
+.service__list {
+  @media (768px <= width) {
+    display: block grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8%;
+  }
+}
+
+.service__list-item {
+  & + & {
+    margin-block-start: 2.5rem;
+
+    @media (768px <= width) {
+      margin-block-start: revert;
+    }
+  }
+}
+
+/* サービスカード：アクセントブルーのボーダーラインで区切る */
+/* Service アイテムのレイアウト調整 */
+.service-item {
+  border-block-start: 2px solid var(--color-accent);
+  padding-block-start: 1.5rem;
+  text-align: center; /* 中央揃えで見やすく */
+}
+
+/* 画像の丸いデザイン */
+.service-item__image img {
+  width: 150px;      /* 表示サイズ */
+  height: 150px;
+  object-fit: cover; /* 画像をはみ出さずにトリミング */
+  border-radius: 50%; /* 円形にする */
+  margin-bottom: 1rem;
+  border: 3px solid var(--color-white); /* 白い枠線で清潔感を出す */
+  box-shadow: 0 4px 10px rgba(30, 58, 110, 0.1); /* 薄い影をつけて立体感を出す */
+}
+
+/* テキストの余白微調整 */
+.service-item__name {
+  margin-block-start: 1rem;
+  font-weight: 700;
+  color: var(--color-dark-800);
+  font-size: 1.0625rem;
+}
+
+/* ========================================================================
+//  message
+======================================================================== */
+.message {
+  background-color: var(--color-gray-50);   /* パールブルー */
+}
+
+.message__wrap {
+  @media (768px <= width) {
+    display: flex;
+    flex-direction: row;
+    column-gap: 4.5%;
+  }
+}
+
+.message__image {
+  img {
+    inline-size: 100%;
+    box-shadow: 0 4px 20px 0 rgb(30 58 110 / 12%);
+    border-radius: 4px;
+  }
+}
+
+.message__text-wrap {
+  margin-block-start: calc(32 / 24 * 1rlh);
+
+  @media (768px <= width) {
+    margin-block-start: revert;
+  }
+}
+
+.message__description {
+  line-height: 1.8;
+  color: var(--color-gray-800);
+}
+
+/* ========================================================================
+//  footer
+======================================================================== */
+.footer {
+  color: var(--color-dark-800);
+  text-align: center;
+  background-color: var(--color-bg-base);
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;color: ;
+  padding-inline: 32px;
+}
+
+/* --- Contact --- */
+.contact {
+  width: 100%;
+  max-width: 520px;
+  padding: 0;
+  background: transparent;
+}
+
+.contact .section__title { color: var(--color-dark-800); }
+.contact .section__text  { color: var(--color-accent); }
+
+.contact__lead {
+  margin-block: 0.75rlh 1.5rlh;
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--color-gray-800);
+}
+
+.contact__link {
+  display: inline-block;
+  padding: 14px 44px;
+  background-color: var(--color-dark-800);
+  color: var(--color-white);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background-color 0.3s;
+
+  @media (any-hover: hover) {
+    &:hover { background-color: var(--color-accent); }
+  }
+}
+
+/* --- 区切り線 --- */
+.footer__divider {
+  width: 100%;
+  max-width: 400px;
+  height: 1px;
+  background: rgba(107, 143, 201, 0.25);
+}
+
+/* --- SNS --- */
+.sns {
+  width: 100%;
+  max-width: 520px;
+  padding: 0;
+  background: transparent;
+}
+
+.sns .section__title { color: var(--color-dark-800); }
+.sns .section__text  { color: var(--color-accent); }
+
+.sns__icons {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-block-start: 2rem;
+}
+
+.sns__icon-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: opacity 0.3s, transform 0.3s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      opacity: 0.75;
+      transform: translateY(-3px);
+    }
+  }
+}
+
+.sns__icon-link svg {
+  display: block;
+  width: 52px;
+  height: 52px;
+  padding: 13px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: var(--color-white);
+}
+
+.sns__icon-link--line      svg { background-color: #06c755; }
+.sns__icon-link--instagram svg { background-color: #e1306c; }
+.sns__icon-link--x         svg { background-color: #000; }
+
+.sns__icon-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--color-gray-800);
+}
+
+/* --- コピーライト --- */
+.footer__copylight {
+  padding-block: calc(10 / 24 * 1rlh);
+  padding-inline: 0.625rem;
+  background-color: var(--color-dark-800);
+
+  small {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 0.6875rem;
+    color: var(--color-gray-400);
+  }
+}
+
+/* --- Contact のテキスト色を紺色に修正 --- */
+.contact {
+  width: 100%;
+  max-width: 520px;
+  padding: 0;
+  background: transparent;
+  color: var(--color-dark-800); /* 紺色にする */
+}
+
+/* タイトルとサブタイトルも紺色に指定 */
+.contact .section__title { 
+  color: var(--color-dark-800) !important; 
+}
+.contact .section__text  { 
+  color: var(--color-accent) !important;   /* コーンフラワーブルーで見やすく */
+}
+
+/* リードテキスト（説明文）も紺色に */
+.contact__lead {
+  margin-block: 0.75rlh 1.5rlh;
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--color-gray-800); /* メインテキストの深いコバルトブルー */
+}
+
+.contact__link,
+.x__link {
+  max-inline-size: 100%;
+}
+
+/* Contact ボタンホバー */
+.contact__link {
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--color-gray-500);
+      background-color: var(--color-white);
+    }
+  }
+}
+
+/* Instagram ボタン */
+.x__link {
+  color: var(--color-gray-400);     /* ライトブルー */
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: var(--color-dark-800);
+      background-color: var(--color-gray-50); /* パールブルー */
+    }
+  }
+}
+
+/* Instagram エリアのタイトル・テキスト */
+.x .section__title {
+  color: var(--color-gray-400);     /* ライトブルー */
+}
+
+.x .section__text {
+  color: var(--color-accent);       /* コーンフラワーブルー */
+}
+
+.footer__copylight {
+  padding-block: calc(10 / 24 * 1rlh);
+  padding-inline: 0.625rem;
+  background-color: var(--color-dark-800);
+
+  small {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 0.6875rem;
+    color: var(--color-gray-400);   /* ライトブルー */
+  }
+}
+
+/* ========================================================================
+//  animation
+======================================================================== */
+.js-fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.js-fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.u-noscroll {
+  overflow: hidden;
+}
+
+/* ========================================================================
+//  modal - モーダル用スタイルの追加
+======================================================================== */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: var(--z-modal); /* 既存変数のz-modalを使用 */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(30, 58, 110, 0.7); /* テーマ色のディープネイビーを半透明に */
+}
+
+.modal__content {
+  position: relative;
+  background: var(--color-white);
+  padding: 40px;
+  /* widthで幅をパーセント指定、max-widthで大きくなりすぎを防止 */
+  width: 90%;          /* スマホなど小さい画面での余裕 */
+  max-width: 800px;    /* パソコンでの最大サイズを大きく設定 */
+  max-height: 90vh;    /* 縦幅を画面の90%に制限 */
+  border-radius: 8px;
+  overflow-y: auto;    /* コンテンツが溢れたらスクロール */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.modal__close-button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 5px 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: var(--color-gray-800);
+  cursor: pointer;
+}
+
+/* 画像のレスポンシブ調整 */
+#js-modal-img {
+  width: 100%;         /* 親要素(.modal__content)に対して100% */
+  height: auto;        /* 比率を維持 */
+  display: block;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+#js-modal-text {
+  margin-top: 1rem;
+  font-weight: 700;
+  color: var(--color-dark-800);
+  text-align: center;
+}

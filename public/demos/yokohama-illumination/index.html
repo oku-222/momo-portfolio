@@ -1,0 +1,481 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- meta情報 -->
+    <title>YOKOHAMA LIGHTS 2026 - 横浜冬のイルミネーション</title>
+    <meta
+      name="description"
+      content="横浜・みなとみらいの街と海をやさしい光が彩る、冬のイルミネーションイベント「YOKOHAMA LIGHTS 2026」。光に包まれる特別な横浜の夜をお楽しみください。"
+    />
+
+    <!-- ogp -->
+    <!-- <meta property="og:url" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="" /> -->
+
+    <!-- favicon -->
+    <!-- <link rel="icon" href="./assets/img/favicon.ico" type="image/svg+xml" /> -->
+    <!-- <link rel="apple-touch-icon" href="./img/apple-touch-icon.png" sizes="180x180">
+	  <link rel="icon" href="./assets/img/android-icon.png" sizes="192x192"> -->
+
+    <!-- google-font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- SVG Filter -->
+    <svg width="0" height="0" style="position: absolute">
+      <defs>
+        <filter id="glass-distortion" x="0%" y="0%" width="100%" height="100%">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="0.006, 0.006"
+            numOctaves="2"
+            seed="92"
+            result="noise"
+          />
+          <feGaussianBlur in="noise" stdDeviation="2" result="blurred" />
+          <feDisplacementMap
+            in="SourceGraphic"
+            in2="blurred"
+            scale="45"
+            xChannelSelector="R"
+            yChannelSelector="G"
+          />
+        </filter>
+      </defs>
+    </svg>
+
+    <div class="backdrop-layer">
+      <canvas id="js-bubble-canvas"></canvas>
+      <div class="marquee marquee-top">
+        <div class="marquee__content">
+          <span>#YokohamaLights2026</span>
+          <span>#横浜イルミネーション</span>
+          <span>#みなとみらい</span>
+          <span>#横浜夜景</span>
+          <span>#冬の横浜</span>
+          <span>#YokohamaLights2026</span>
+          <span>#横浜イルミネーション</span>
+          <span>#みなとみらい</span>
+          <span>#横浜夜景</span>
+          <span>#冬の横浜</span>
+          <span>#YokohamaLights2026</span>
+          <span>#横浜イルミネーション</span>
+          <span>#みなとみらい</span>
+          <span>#横浜夜景</span>
+          <span>#冬の横浜</span>
+        </div>
+        <div class="marquee__content">
+          <span>#YokohamaLights2026</span>
+          <span>#横浜イルミネーション</span>
+          <span>#みなとみらい</span>
+          <span>#横浜夜景</span>
+          <span>#冬の横浜</span>
+          <span>#YokohamaLights2026</span>
+          <span>#横浜イルミネーション</span>
+          <span>#みなとみらい</span>
+          <span>#横浜夜景</span>
+          <span>#冬の横浜</span>
+          <span>#YokohamaLights2026</span>
+          <span>#横浜イルミネーション</span>
+          <span>#みなとみらい</span>
+          <span>#横浜夜景</span>
+          <span>#冬の横浜</span>
+        </div>
+      </div>
+      <div class="marquee marquee-bottom">
+        <div class="marquee__content">
+          <div class="marquee__image">
+            <img
+              src="./assets/img/marquee-image-01.jpg"
+              alt="横浜イルミネーションの風景"
+              width="192"
+              height="192"
+            />
+          </div>
+          <div class="marquee__image">
+            <img
+              src="./assets/img/marquee-image-02.jpg"
+              alt="横浜イルミネーションの風景"
+              width="192"
+              height="192"
+            />
+          </div>
+          <div class="marquee__image">
+            <img
+              src="./assets/img/marquee-image-03.jpg"
+              alt="横浜イルミネーションの風景"
+              width="192"
+              height="192"
+            />
+          </div>
+          <div class="marquee__image">
+            <img
+              src="./assets/img/marquee-image-04.jpg"
+              alt="横浜イルミネーションの風景"
+              width="192"
+              height="192"
+            />
+          </div>
+          <div class="marquee__image">
+            <img
+              src="./assets/img/marquee-image-05.jpg"
+              alt="横浜イルミネーションの風景"
+              width="192"
+              height="192"
+            />
+          </div>
+          <div class="marquee__image">
+            <img
+              src="./assets/img/marquee-image-06.jpg"
+              alt="横浜イルミネーションの風景"
+              width="192"
+              height="192"
+            />
+          </div>
+          <div class="marquee__image">
+            <img
+              src="./assets/img/marquee-image-07.jpg"
+              alt="横浜イルミネーションの風景"
+              width="192"
+              height="192"
+            />
+          </div>
+          <div class="marquee__image">
+            <img
+              src="./assets/img/marquee-image-08.jpg"
+              alt="横浜イルミネーションの風景"
+              width="192"
+              height="192"
+            />
+          </div>
+          <div class="marquee__image">
+            <img
+              src="./assets/img/marquee-image-09.jpg"
+              alt="横浜イルミネーションの風景"
+              width="192"
+              height="192"
+            />
+          </div>
+        </div>
+        <div class="marquee__content">
+          <div class="marquee__image">
+            <img
+              src="./assets/img/marquee-image-01.jpg"
+              alt="横浜イルミネーションの風景"
+              width="192"
+              height="192"
+            />
+          </div>
+          <div class="marquee__image">
+            <img
+              src="./assets/img/marquee-image-02.jpg"
+              alt="横浜イルミネーションの風景"
+              width="192"
+              height="192"
+            />
+          </div>
+          <div class="marquee__image">
+            <img
+              src="./assets/img/marquee-image-03.jpg"
+              alt="横浜イルミネーションの風景"
+              width="192"
+              height="192"
+            />
+          </div>
+          <div class="marquee__image">
+            <img
+              src="./assets/img/marquee-image-04.jpg"
+              alt="横浜イルミネーションの風景"
+              width="192"
+              height="192"
+            />
+          </div>
+          <div class="marquee__image">
+            <img
+              src="./assets/img/marquee-image-05.jpg"
+              alt="横浜イルミネーションの風景"
+              width="192"
+              height="192"
+            />
+          </div>
+          <div class="marquee__image">
+            <img
+              src="./assets/img/marquee-image-06.jpg"
+              alt="横浜イルミネーションの風景"
+              width="192"
+              height="192"
+            />
+          </div>
+          <div class="marquee__image">
+            <img
+              src="./assets/img/marquee-image-07.jpg"
+              alt="横浜イルミネーションの風景"
+              width="192"
+              height="192"
+            />
+          </div>
+          <div class="marquee__image">
+            <img
+              src="./assets/img/marquee-image-08.jpg"
+              alt="横浜イルミネーションの風景"
+              width="192"
+              height="192"
+            />
+          </div>
+          <div class="marquee__image">
+            <img
+              src="./assets/img/marquee-image-09.jpg"
+              alt="横浜イルミネーションの風景"
+              width="192"
+              height="192"
+            />
+          </div>
+        </div>
+      </div>
+      <p class="backdrop-layer__text">
+        <span class="text-chunk">横浜の冬を、</span
+        ><span class="text-chunk">光と歩こう。</span>
+      </p>
+    </div>
+
+    <div class="main-wrapper">
+      <header class="header js-header">
+        <div class="header__wrap">
+          <h1 class="header__logo">YOKOHAMA LIGHTS 2026（ポートフォリオ用）</h1>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener"
+            class="header__sns"
+            aria-label="Instagram"
+          >
+            <!-- SVG Icon for Instagram -->
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+              />
+            </svg>
+          </a>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="hero">
+          <div class="hero__bg"></div>
+          <div class="hero__content">
+            <p class="hero__catch">この冬、横浜が光に包まれる。</p>
+            <h2 class="hero__title">
+              <span>YOKOHAMA</span>
+              <span>LIGHTS</span>
+              <span>2026</span>
+            </h2>
+            <p class="hero__sub">YOKOHAMA WINTER ILLUMINATION</p>
+            <div class="hero__scroll">SCROLL</div>
+            <div class="hero__date">2026.11.20 [Fri] - 2027.2.14 [Sun]</div>
+          </div>
+        </section>
+
+        <section class="concept section">
+          <div class="concept__inner inner">
+            <div class="concept__image"></div>
+            <h3 class="section__title neon-text js-fade-in" data-neon="cyan">
+              CONCEPT
+            </h3>
+            <div class="concept__text-box">
+              <p class="concept__text js-fade-in">冬の横浜を、光が彩る。</p>
+              <p class="concept__text js-fade-in">
+                <span class="text-chunk">海辺の街に灯る、</span
+                ><span class="text-chunk">やさしい光のきらめき。</span>
+              </p>
+              <p class="concept__text js-fade-in">
+                みなとみらいの夜景と<br />イルミネーションが重なり、<br />街全体がひとつの光景へ。
+              </p>
+              <p class="concept__text js-fade-in">
+                大切な人と歩きたくなる、<br />特別な冬の横浜を。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="highlights section js-fade-in">
+          <div class="highlights__inner inner">
+            <h3 class="section__title neon-text" data-neon="cyan">
+              HIGHLIGHTS
+            </h3>
+            <p class="highlights__lead">
+              光に包まれる横浜の夜。<br />お気に入りの景色を見つけよう。
+            </p>
+
+            <div class="gallery">
+              <div class="gallery__item">
+                <img
+                  src="assets/img/gallery_1.png"
+                  alt="みなとみらいの観覧車とイルミネーション"
+                  class="gallery__image"
+                  width="640"
+                  height="640"
+                />
+                <p class="gallery__caption">光輝く、みなとみらいの夜</p>
+              </div>
+              <div class="gallery__item">
+                <img
+                  src="assets/img/gallery_2.png"
+                  alt="赤レンガ倉庫周辺のイルミネーション"
+                  class="gallery__image"
+                  width="640"
+                  height="640"
+                />
+                <p class="gallery__caption">歴史ある街並みを彩る光</p>
+              </div>
+              <div class="gallery__item">
+                <img
+                  src="assets/img/gallery_3.png"
+                  alt="光の並木道を歩く冬の風景"
+                  class="gallery__image"
+                  width="640"
+                  height="640"
+                />
+                <p class="gallery__caption">光の道を歩く、冬のひととき</p>
+              </div>
+            </div>
+
+            <p class="highlights__hashtags">
+              #YokohamaLights2026 #横浜イルミネーション #みなとみらい
+            </p>
+          </div>
+        </section>
+
+        <section class="info-access section js-fade-in" id="access">
+          <div class="info-access__inner inner">
+            <h3 class="section__title neon-text" data-neon="blue">
+              INFORMATION
+            </h3>
+            <dl class="info-list">
+              <div class="info-list__item">
+                <dt>会期</dt>
+                <dd>2026.11.20 [Fri] - 2027.2.14 [Sun]</dd>
+              </div>
+              <div class="info-list__item">
+                <dt>時間</dt>
+                <dd>17:00〜22:00</dd>
+              </div>
+              <div class="info-list__item">
+                <dt>会場</dt>
+                <dd>横浜・みなとみらい21地区</dd>
+              </div>
+            </dl>
+
+            <div class="map-container">
+              <iframe
+                title="Googleマップ"
+                src="https://www.google.com/maps?q=%E3%81%BF%E3%81%AA%E3%81%A8%E3%81%BF%E3%82%89%E3%81%8421&output=embed"
+                width="600"
+                height="250"
+                style="border: 0; width: 100%"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <p class="access-text">みなとみらい駅 徒歩約3分 / 桜木町駅 徒歩約10分</p>
+          </div>
+        </section>
+
+        <section class="tickets section js-fade-in" id="tickets">
+          <div class="tickets__inner inner">
+            <h3 class="section__title neon-text" data-neon="blue">EVENT INFO</h3>
+
+            <div class="tickets__card glass-panel">
+              <ul class="tickets__price-list">
+                <li>
+                  <span>入場・観覧</span>
+                  <span class="price">無料</span>
+                </li>
+              </ul>
+              <p class="tickets__note">
+                どなたでも自由にお楽しみいただけます。<br />※一部施設・イベントは別途料金が必要となる場合があります。
+              </p>
+            </div>
+
+            <a
+              href="#access"
+              class="tickets__button button js-purchase-btn"
+            >
+              <span class="button__text">＞ 会場へのアクセスを見る</span>
+            </a>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer__inner">
+          <p class="footer__organizer">主催：YOKOHAMA LIGHTS 2026 実行委員会</p>
+          <p class="footer__contact">
+            お問い合わせ：<a href="mailto:info@yokohama-lights.jp">info@yokohama-lights.jp</a>
+          </p>
+          <!-- Instagram Icon Footer -->
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener"
+            class="footer__sns"
+            aria-label="Instagram"
+          >
+            <!-- SVG Icon for Instagram -->
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+              />
+            </svg>
+          </a>
+          <p class="footer__copy">
+            COPYRIGHT &copy; YOKOHAMA LIGHTS 2026 ALL RIGHTS RESERVED.
+          </p>
+        </div>
+      </footer>
+
+      <div class="sticky-cta js-sticky-cta">
+        <a
+          href="#access"
+          class="button button--sticky"
+          aria-label="会場へのアクセスを見る"
+        >
+          <svg
+            class="button__icon"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <rect x="2" y="6" width="20" height="12" rx="2" />
+            <line x1="15" y1="6" x2="15" y2="18" stroke-dasharray="2 2" />
+          </svg>
+          会場へのアクセス
+        </a>
+      </div>
+    </div>
+
+    <script src="./assets/js/script.js" defer></script>
+  </body>
+</html>

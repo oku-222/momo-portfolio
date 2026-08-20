@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ===================================================================
+     SEO: 基本メタタグ
+=================================================================== -->
+<title>猫カフェ Mofuu（もふぅ）| 横浜・山下町 都会の中で、心がほどける猫との時間</title>
+<meta name="description" content="猫カフェ Mofuu（もふぅ）は、横浜・山下町にある北欧ナチュラルテイストの猫カフェ。大きな窓から差し込む光と観葉植物に囲まれ、8匹の猫たちと過ごすやさしい時間をお楽しみいただけます。">
+<meta name="keywords" content="猫カフェ,横浜,山下町,MOFUU CAT LOUNGE,北欧,ナチュラル,カフェ,癒し">
+<meta name="author" content="猫カフェ Mofuu">
+<link rel="canonical" href="https://mofuu-cat-lounge.example.com/">
+
+<!-- favicon（差し替え用。現在はオリジナルの肉球アイコンSVGを使用） -->
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<!-- ===================================================================
+     SEO: OGP / Twitter Card
+=================================================================== -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="猫カフェ Mofuu（もふぅ）| 都会の中で、心がほどける猫との時間">
+<meta property="og:description" content="横浜・山下町の北欧ナチュラルテイスト猫カフェ。8匹の猫たちと過ごす、上質でやさしいひととき。">
+<meta property="og:url" content="https://mofuu-cat-lounge.example.com/">
+<meta property="og:site_name" content="猫カフェ Mofuu">
+<meta property="og:image" content="https://images.unsplash.com/photo-1654673131239-e45496600741?auto=format&fit=crop&w=1200&q=80">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="猫カフェ Mofuu（もふぅ）">
+<meta name="twitter:description" content="都会の中で、心がほどける猫との時間。横浜・山下町の北欧ナチュラル猫カフェ。">
+<meta name="twitter:image" content="https://images.unsplash.com/photo-1654673131239-e45496600741?auto=format&fit=crop&w=1200&q=80">
+
+<!-- ===================================================================
+     Google Fonts（Cormorant Garamond / Noto Serif JP）
+=================================================================== -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ===================================================================
+     CSS
+=================================================================== -->
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+
+<!-- ===================================================================
+     構造化データ（LocalBusiness / CafeOrCoffeeShop）
+=================================================================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "猫カフェ Mofuu（もふぅ）",
+  "alternateName": "MOFUU CAT LOUNGE",
+  "image": "https://images.unsplash.com/photo-1654673131239-e45496600741?auto=format&fit=crop&w=1200&q=80",
+  "description": "都会の中で、心がほどける猫との時間をコンセプトにした横浜・山下町の猫カフェ。",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "山下町○○-○",
+    "addressLocality": "横浜市中区",
+    "addressRegion": "神奈川県",
+    "addressCountry": "JP"
+  },
+  "telephone": "+81-45-000-0000",
+  "servesCuisine": "Cafe",
+  "priceRange": "¥900〜¥3,000",
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Thursday","Friday"],
+      "opens": "11:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Saturday","Sunday"],
+      "opens": "10:00",
+      "closes": "20:00"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<!-- スキップリンク（アクセシビリティ：キーボード操作対応） -->
+<a class="skip-link" href="#main">本文へスキップ</a>
+
+<!-- ===================================================================
+     HEADER / ナビゲーション
+=================================================================== -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="#hero" class="header__logo" aria-label="猫カフェ Mofuu トップへ">
+      <span class="header__logo-en">MOFUU</span>
+      <span class="header__logo-ja">猫カフェ もふぅ</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="メインナビゲーション">
+      <ul class="nav__list">
+        <li><a href="#about" class="nav__link">About</a></li>
+        <li><a href="#cats" class="nav__link">Cats</a></li>
+        <li><a href="#menu" class="nav__link">Menu</a></li>
+        <li><a href="#gallery" class="nav__link">Gallery</a></li>
+        <li><a href="#information" class="nav__link">Information</a></li>
+        <li><a href="#access" class="nav__link">Access</a></li>
+        <li><a href="#reserve" class="nav__link nav__link--cta">ご予約</a></li>
+      </ul>
+    </nav>
+
+    <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav">
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+      <span class="hamburger__line"></span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- =================================================================
+       ① HERO
+  ================================================================== -->
+  <section class="hero" id="hero">
+    <div class="hero__media">
+      <img
+        src="images/mofuu_fv_new.png"
+        width="1536" height="1024"
+        alt="自然光が差し込む上質な猫カフェで過ごす猫たち。"
+        class="hero__img"
+        id="heroImg"
+      >
+      <div class="hero__overlay" aria-hidden="true"></div>
+    </div>
+
+    <div class="hero__content">
+      <p class="eyebrow eyebrow--light" data-anim="fade-up">MOFUU CAT LOUNGE — YOKOHAMA</p>
+      <h1 class="hero__title" data-anim="fade-up" data-anim-delay="1">
+        猫と過ごす、<br class="hero__br">やさしい時間。
+      </h1>
+      <p class="hero__lead" data-anim="fade-up" data-anim-delay="2">
+        都会の中で、心がほどける猫とのひととき。<br class="hero__br">
+        大きな窓から差し込む光と、8匹の猫たちが待っています。
+      </p>
+      <div class="hero__actions" data-anim="fade-up" data-anim-delay="3">
+        <a href="#reserve" class="btn btn--primary">ご予約はこちら</a>
+        <a href="#about" class="btn btn--ghost btn--ghost-light">Mofuuについて</a>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-cue" aria-label="次のセクションへスクロール">
+      <span class="scroll-cue__line"></span>
+      <span class="scroll-cue__text">Scroll</span>
+    </a>
+  </section>
+
+  <!-- =================================================================
+       ② ABOUT
+  ================================================================== -->
+  <section class="about" id="about">
+    <div class="container about__grid">
+
+      <div class="about__media" data-anim="fade-up">
+        <div class="about__media-frame">
+          <img
+            src="https://images.unsplash.com/photo-1691067987594-b1b7f84ba55a?auto=format&fit=crop&w=1000&q=80"
+            loading="lazy" width="1000" height="750"
+            alt="木のテーブルが並ぶ、観葉植物に囲まれたナチュラルテイストの店内。"
+          >
+        </div>
+        <div class="about__media-accent" aria-hidden="true"></div>
+      </div>
+
+      <div class="about__text">
+        <p class="eyebrow">ABOUT MOFUU</p>
+        <h2 class="section-title" data-heading>
+          都会の中で、<br>心がほどける場所。
+        </h2>
+        <p class="about__lead">
+          Mofuuは、横浜・山下町にひっそりと佇む猫カフェです。<br>
+          大きな窓、木の温もり、観葉植物の緑——。<br>
+          そのすべてが、忙しい毎日の中でこわばった心を、<br>
+          少しずつゆるめてくれます。
+        </p>
+        <p class="about__body">
+          保護猫カフェではなく、上質な時間そのものを楽しんでいただくための空間として設計しました。
+          北欧インテリアに囲まれた落ち着いた店内で、8匹の個性豊かな猫たちが、
+          あなたのそばでゆったりと過ごします。おひとりの時間にも、
+          大切な人との時間にも。ここでしか流れない、やさしい時間をどうぞ。
+        </p>
+        <ul class="about__points">
+          <li>大きな窓から差し込む、やわらかな自然光</li>
+          <li>木の温もりを感じるナチュラルインテリア</li>
+          <li>観葉植物に囲まれた、深呼吸したくなる空間</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =================================================================
+       ③ CATS
+  ================================================================== -->
+  <section class="cats" id="cats">
+    <div class="container">
+      <div class="section-head" data-anim="fade-up">
+        <p class="eyebrow">OUR CATS</p>
+        <h2 class="section-title" data-heading>在籍する、8匹の猫たち</h2>
+        <p class="section-desc">それぞれに違う性格と表情。あなたのお気に入りを見つけてください。</p>
+      </div>
+
+      <div class="cats__grid">
+
+        <article class="cat-card" data-anim="fade-up">
+          <div class="cat-card__photo">
+            <img src="https://images.unsplash.com/photo-1498100152307-ce63fd6c5424?auto=format&fit=crop&w=600&q=80"
+                 loading="lazy" width="600" height="600" alt="もな。白黒の毛並みが美しい甘えん坊の猫。">
+          </div>
+          <div class="cat-card__body">
+            <h3 class="cat-card__name">もな <span class="cat-card__age">3歳</span></h3>
+            <p class="cat-card__personality">甘えん坊</p>
+            <p class="cat-card__desc">お客様の膝の上が大好き。気づくといつも誰かのそばにいます。</p>
+          </div>
+        </article>
+
+        <article class="cat-card" data-anim="fade-up" data-anim-delay="1">
+          <div class="cat-card__photo">
+            <img src="https://images.unsplash.com/photo-1582725461742-8ecd962c260d?auto=format&fit=crop&w=600&q=80"
+                 loading="lazy" width="600" height="600" alt="くるみ。三毛猫でおっとりマイペースな性格。">
+          </div>
+          <div class="cat-card__body">
+            <h3 class="cat-card__name">くるみ <span class="cat-card__age">2歳</span></h3>
+            <p class="cat-card__personality">おっとりマイペース</p>
+            <p class="cat-card__desc">窓辺の日だまりがお気に入り。マイペースに毛づくろいする姿が人気。</p>
+          </div>
+        </article>
+
+        <article class="cat-card" data-anim="fade-up" data-anim-delay="2">
+          <div class="cat-card__photo">
+            <img src="https://images.unsplash.com/photo-1631307494857-fa85ac2c6c38?auto=format&fit=crop&w=600&q=80"
+                 loading="lazy" width="600" height="600" alt="そら。グレーと白の毛並みで好奇心旺盛な猫。">
+          </div>
+          <div class="cat-card__body">
+            <h3 class="cat-card__name">そら <span class="cat-card__age">4歳</span></h3>
+            <p class="cat-card__personality">好奇心旺盛</p>
+            <p class="cat-card__desc">新しいお客様が来ると真っ先にお出迎え。おもちゃ遊びが得意です。</p>
+          </div>
+        </article>
+
+        <article class="cat-card" data-anim="fade-up" data-anim-delay="3">
+          <div class="cat-card__photo">
+            <img src="https://images.unsplash.com/photo-1552933529-e359b2477252?auto=format&fit=crop&w=600&q=80"
+                 loading="lazy" width="600" height="600" alt="あんず。オレンジ色の毛並みでやんちゃな甘えっ子。">
+          </div>
+          <div class="cat-card__body">
+            <h3 class="cat-card__name">あんず <span class="cat-card__age">1歳</span></h3>
+            <p class="cat-card__personality">やんちゃな甘えっ子</p>
+            <p class="cat-card__desc">まだまだ子猫気分。追いかけっこと甘噛みが大好きな末っ子です。</p>
+          </div>
+        </article>
+
+        <article class="cat-card" data-anim="fade-up">
+          <div class="cat-card__photo">
+            <img src="https://images.unsplash.com/photo-1583795128727-6ec3642408f8?auto=format&fit=crop&w=600&q=80"
+                 loading="lazy" width="600" height="600" alt="はな。茶白の毛並みでしっかり者の猫。">
+          </div>
+          <div class="cat-card__body">
+            <h3 class="cat-card__name">はな <span class="cat-card__age">5歳</span></h3>
+            <p class="cat-card__personality">しっかり者のお姉さん</p>
+            <p class="cat-card__desc">他の猫たちのまとめ役。落ち着いた佇まいでいつも堂々としています。</p>
+          </div>
+        </article>
+
+        <article class="cat-card" data-anim="fade-up" data-anim-delay="1">
+          <div class="cat-card__photo">
+            <img src="https://images.unsplash.com/photo-1608032364895-0da67af36cd2?auto=format&fit=crop&w=600&q=80"
+                 loading="lazy" width="600" height="600" alt="みるく。白とオレンジの毛並みで人懐っこい猫。">
+          </div>
+          <div class="cat-card__body">
+            <h3 class="cat-card__name">みるく <span class="cat-card__age">2歳</span></h3>
+            <p class="cat-card__personality">人懐っこい</p>
+            <p class="cat-card__desc">初めてのお客様にも臆せずご挨拶。撫でられるのが何よりの幸せ。</p>
+          </div>
+        </article>
+
+        <article class="cat-card" data-anim="fade-up" data-anim-delay="2">
+          <div class="cat-card__photo">
+            <img src="https://images.unsplash.com/photo-1559624989-7b9303bd9792?auto=format&fit=crop&w=600&q=80"
+                 loading="lazy" width="600" height="600" alt="こむぎ。茶トラの毛並みでのんびり屋の猫。">
+          </div>
+          <div class="cat-card__body">
+            <h3 class="cat-card__name">こむぎ <span class="cat-card__age">3歳</span></h3>
+            <p class="cat-card__personality">のんびり屋</p>
+            <p class="cat-card__desc">高い場所からお店を見渡すのが日課。マイペースな時間の過ごし方の達人です。</p>
+          </div>
+        </article>
+
+        <article class="cat-card" data-anim="fade-up" data-anim-delay="3">
+          <div class="cat-card__photo">
+            <img src="https://images.unsplash.com/photo-1558201496-a35f22e7fb5c?auto=format&fit=crop&w=600&q=80"
+                 loading="lazy" width="600" height="600" alt="ちゃとら。茶トラ柄で元気いっぱいの猫。">
+          </div>
+          <div class="cat-card__body">
+            <h3 class="cat-card__name">ちゃとら <span class="cat-card__age">1歳</span></h3>
+            <p class="cat-card__personality">元気いっぱい</p>
+            <p class="cat-card__desc">店内で一番の運動好き。キャットタワーを飛び回る姿は必見です。</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       ④ MENU
+  ================================================================== -->
+  <section class="menu" id="menu">
+    <div class="container">
+      <div class="section-head" data-anim="fade-up">
+        <p class="eyebrow">MENU</p>
+        <h2 class="section-title" data-heading>ドリンク＆スイーツ</h2>
+        <p class="section-desc">猫たちと過ごす時間を、もう少し豊かにするメニューをご用意しました。</p>
+      </div>
+
+      <div class="menu__lists">
+
+        <div class="menu-list" data-anim="fade-up">
+          <div class="menu-list__media">
+            <img src="https://images.unsplash.com/photo-1621135177072-57c9b6242e7a?auto=format&fit=crop&w=700&q=80"
+                 loading="lazy" width="700" height="500" alt="木のテーブルに置かれた白いカップのドリンク。">
+          </div>
+          <h3 class="menu-list__title">Drink</h3>
+          <ul class="menu-list__items">
+            <li><span class="menu-list__name">カフェラテ</span><span class="menu-list__dots" aria-hidden="true"></span><span class="menu-list__price">¥650</span></li>
+            <li><span class="menu-list__name">ハーブティー</span><span class="menu-list__dots" aria-hidden="true"></span><span class="menu-list__price">¥600</span></li>
+            <li><span class="menu-list__name">抹茶ラテ</span><span class="menu-list__dots" aria-hidden="true"></span><span class="menu-list__price">¥680</span></li>
+            <li><span class="menu-list__name">レモンスカッシュ</span><span class="menu-list__dots" aria-hidden="true"></span><span class="menu-list__price">¥620</span></li>
+          </ul>
+        </div>
+
+        <div class="menu-list" data-anim="fade-up" data-anim-delay="1">
+          <div class="menu-list__media">
+            <img src="https://images.unsplash.com/photo-1524351199678-941a58a3df50?auto=format&fit=crop&w=700&q=80"
+                 loading="lazy" width="700" height="500" alt="黒いプレートに盛られたケーキ。">
+          </div>
+          <h3 class="menu-list__title">Sweets</h3>
+          <ul class="menu-list__items">
+            <li><span class="menu-list__name">チーズケーキ</span><span class="menu-list__dots" aria-hidden="true"></span><span class="menu-list__price">¥750</span></li>
+            <li><span class="menu-list__name">ガトーショコラ</span><span class="menu-list__dots" aria-hidden="true"></span><span class="menu-list__price">¥780</span></li>
+            <li><span class="menu-list__name">プリン</span><span class="menu-list__dots" aria-hidden="true"></span><span class="menu-list__price">¥580</span></li>
+            <li><span class="menu-list__name">季節のタルト</span><span class="menu-list__dots" aria-hidden="true"></span><span class="menu-list__price">¥820</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="menu__plans" data-anim="fade-up">
+        <h3 class="menu__plans-title">ご利用料金</h3>
+        <div class="plan-table">
+          <div class="plan-table__row plan-table__row--head">
+            <span>プラン</span><span>料金</span>
+          </div>
+          <div class="plan-table__row">
+            <span>30分</span><span>¥900</span>
+          </div>
+          <div class="plan-table__row">
+            <span>60分</span><span>¥1,600</span>
+          </div>
+          <div class="plan-table__row">
+            <span>90分</span><span>¥2,200</span>
+          </div>
+          <div class="plan-table__row plan-table__row--highlight">
+            <span>フリープラン<small>（ドリンク付き）</small></span><span>¥3,000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       ⑤ GALLERY
+  ================================================================== -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-head" data-anim="fade-up">
+        <p class="eyebrow">GALLERY</p>
+        <h2 class="section-title" data-heading>Mofuuの、日々の風景</h2>
+        <p class="section-desc">クリックすると、写真を大きくご覧いただけます。</p>
+      </div>
+
+      <div class="gallery__grid" id="galleryGrid">
+        <!-- gallery items: data-full is used by the modal (script.js) -->
+        <button class="gallery__item gallery__item--tall" data-full="https://images.unsplash.com/photo-1536589961747-e239b2abbec2?auto=format&fit=crop&w=1400&q=80" aria-label="ギャラリー写真を拡大表示" data-anim="fade-up">
+          <img src="https://images.unsplash.com/photo-1536589961747-e239b2abbec2?auto=format&fit=crop&w=700&q=80" loading="lazy" width="700" height="900" alt="窓辺でくつろぐ白と茶色の猫。">
+        </button>
+        <button class="gallery__item" data-full="https://images.unsplash.com/photo-1511081692775-05d0f180a065?auto=format&fit=crop&w=1400&q=80" aria-label="ギャラリー写真を拡大表示" data-anim="fade-up" data-anim-delay="1">
+          <img src="https://images.unsplash.com/photo-1511081692775-05d0f180a065?auto=format&fit=crop&w=700&q=80" loading="lazy" width="700" height="500" alt="やわらかな照明の店内。">
+        </button>
+        <button class="gallery__item" data-full="https://images.unsplash.com/photo-1564327367919-cb377ea6a88f?auto=format&fit=crop&w=1400&q=80" aria-label="ギャラリー写真を拡大表示" data-anim="fade-up" data-anim-delay="2">
+          <img src="https://images.unsplash.com/photo-1564327367919-cb377ea6a88f?auto=format&fit=crop&w=700&q=80" loading="lazy" width="700" height="500" alt="カプチーノのカップ。">
+        </button>
+        <button class="gallery__item gallery__item--tall" data-full="https://images.unsplash.com/photo-1676300185983-d5f242babe34?auto=format&fit=crop&w=1400&q=80" aria-label="ギャラリー写真を拡大表示" data-anim="fade-up">
+          <img src="https://images.unsplash.com/photo-1676300185983-d5f242babe34?auto=format&fit=crop&w=700&q=80" loading="lazy" width="700" height="900" alt="コーヒーと一緒にいただくチーズケーキ。">
+        </button>
+        <button class="gallery__item" data-full="https://images.unsplash.com/photo-1596854372745-0906a0593bca?auto=format&fit=crop&w=1400&q=80" aria-label="ギャラリー写真を拡大表示" data-anim="fade-up" data-anim-delay="1">
+          <img src="https://images.unsplash.com/photo-1596854372745-0906a0593bca?auto=format&fit=crop&w=700&q=80" loading="lazy" width="700" height="500" alt="オレンジと白の毛並みの猫。">
+        </button>
+        <button class="gallery__item" data-full="https://images.unsplash.com/photo-1521917441209-e886f0404a7b?auto=format&fit=crop&w=1400&q=80" aria-label="ギャラリー写真を拡大表示" data-anim="fade-up" data-anim-delay="2">
+          <img src="https://images.unsplash.com/photo-1521917441209-e886f0404a7b?auto=format&fit=crop&w=700&q=80" loading="lazy" width="700" height="500" alt="木の椅子とテーブルが並ぶ店内。">
+        </button>
+        <button class="gallery__item gallery__item--tall" data-full="https://images.unsplash.com/photo-1502462041640-b3d7e50d0662?auto=format&fit=crop&w=1400&q=80" aria-label="ギャラリー写真を拡大表示" data-anim="fade-up">
+          <img src="https://images.unsplash.com/photo-1502462041640-b3d7e50d0662?auto=format&fit=crop&w=700&q=80" loading="lazy" width="700" height="900" alt="ラテアートのクローズアップ。">
+        </button>
+        <button class="gallery__item" data-full="https://images.unsplash.com/photo-1567171466295-4afa63d45416?auto=format&fit=crop&w=1400&q=80" aria-label="ギャラリー写真を拡大表示" data-anim="fade-up" data-anim-delay="1">
+          <img src="https://images.unsplash.com/photo-1567171466295-4afa63d45416?auto=format&fit=crop&w=700&q=80" loading="lazy" width="700" height="500" alt="ベリーがのったケーキ。">
+        </button>
+        <button class="gallery__item" data-full="https://images.unsplash.com/photo-1647806422508-0322f33e270b?auto=format&fit=crop&w=1400&q=80" aria-label="ギャラリー写真を拡大表示" data-anim="fade-up" data-anim-delay="2">
+          <img src="https://images.unsplash.com/photo-1647806422508-0322f33e270b?auto=format&fit=crop&w=700&q=80" loading="lazy" width="700" height="500" alt="テーブルの上に座る猫。">
+        </button>
+        <button class="gallery__item gallery__item--tall" data-full="https://images.unsplash.com/photo-1534040385115-33dcb3acba5b?auto=format&fit=crop&w=1400&q=80" aria-label="ギャラリー写真を拡大表示" data-anim="fade-up">
+          <img src="https://images.unsplash.com/photo-1534040385115-33dcb3acba5b?auto=format&fit=crop&w=700&q=80" loading="lazy" width="700" height="900" alt="テーブルのそばに置かれた観葉植物。">
+        </button>
+        <button class="gallery__item" data-full="https://images.unsplash.com/photo-1595434091143-b375ced5fe5c?auto=format&fit=crop&w=1400&q=80" aria-label="ギャラリー写真を拡大表示" data-anim="fade-up" data-anim-delay="1">
+          <img src="https://images.unsplash.com/photo-1595434091143-b375ced5fe5c?auto=format&fit=crop&w=700&q=80" loading="lazy" width="700" height="500" alt="木のテーブルに置かれた白いカップ。">
+        </button>
+        <button class="gallery__item" data-full="https://images.unsplash.com/photo-1622621746668-59fb299bc4d7?auto=format&fit=crop&w=1400&q=80" aria-label="ギャラリー写真を拡大表示" data-anim="fade-up" data-anim-delay="2">
+          <img src="https://images.unsplash.com/photo-1622621746668-59fb299bc4d7?auto=format&fit=crop&w=700&q=80" loading="lazy" width="700" height="500" alt="いちごが添えられたケーキ。">
+        </button>
+      </div>
+    </div>
+
+    <!-- ギャラリーモーダル -->
+    <div class="modal" id="galleryModal" role="dialog" aria-modal="true" aria-label="写真拡大表示" hidden>
+      <button class="modal__close" id="modalClose" aria-label="閉じる">&times;</button>
+      <button class="modal__nav modal__nav--prev" id="modalPrev" aria-label="前の写真">&#10094;</button>
+      <img class="modal__img" id="modalImg" src="" alt="">
+      <button class="modal__nav modal__nav--next" id="modalNext" aria-label="次の写真">&#10095;</button>
+    </div>
+  </section>
+
+  <!-- =================================================================
+       ⑥ INFORMATION
+  ================================================================== -->
+  <section class="information" id="information">
+    <div class="container information__grid">
+
+      <div class="information__block" data-anim="fade-up">
+        <p class="eyebrow">INFORMATION</p>
+        <h2 class="section-title" data-heading>ご利用案内</h2>
+
+        <dl class="info-table">
+          <div class="info-table__row">
+            <dt>営業時間</dt>
+            <dd>平日 11:00〜20:00<br>土日祝 10:00〜20:00<br><span class="info-table__note">最終受付 19:00</span></dd>
+          </div>
+          <div class="info-table__row">
+            <dt>定休日</dt>
+            <dd>毎週水曜日</dd>
+          </div>
+          <div class="info-table__row">
+            <dt>住所</dt>
+            <dd>〒231-0023<br>神奈川県横浜市中区山下町○○-○</dd>
+          </div>
+          <div class="info-table__row">
+            <dt>電話番号</dt>
+            <dd><a href="tel:0450000000">045-000-0000</a></dd>
+          </div>
+          <div class="info-table__row">
+            <dt>メール</dt>
+            <dd><a href="mailto:info@mofuu-cat-lounge.example.com">info@mofuu-cat-lounge.example.com</a></dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="information__block information__reserve" id="reserve" data-anim="fade-up" data-anim-delay="1">
+        <h3 class="information__reserve-title">ご予約・お問い合わせ</h3>
+        <p class="information__reserve-lead">
+          ご来店には事前のご予約をおすすめしております。<br>
+          お電話・メール・予約フォームのいずれかよりお気軽にどうぞ。
+        </p>
+        <div class="information__reserve-actions">
+          <!-- 予約ボタン（ダミーリンク） -->
+          <a href="#" class="btn btn--primary btn--block">WEBで予約する</a>
+          <a href="#contact-form" class="btn btn--ghost btn--block">お問い合わせフォーム</a>
+        </div>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="contact-form__row">
+            <label for="cf-name">お名前</label>
+            <input type="text" id="cf-name" name="name" autocomplete="name" required>
+          </div>
+          <div class="contact-form__row">
+            <label for="cf-email">メールアドレス</label>
+            <input type="email" id="cf-email" name="email" autocomplete="email" required>
+          </div>
+          <div class="contact-form__row">
+            <label for="cf-message">お問い合わせ内容</label>
+            <textarea id="cf-message" name="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--block">送信する</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =================================================================
+       ⑦ ACCESS
+  ================================================================== -->
+  <section class="access" id="access">
+    <div class="container">
+      <div class="section-head" data-anim="fade-up">
+        <p class="eyebrow">ACCESS</p>
+        <h2 class="section-title" data-heading>アクセス</h2>
+        <p class="section-desc">みなとみらい線「元町・中華街」駅より徒歩8分。山下公園にもほど近い立地です。</p>
+      </div>
+
+      <div class="access__grid" data-anim="fade-up">
+        <!-- Google Map 埋め込み位置（ダミー）。実際の店舗が決まり次第、iframeのsrcを差し替えるだけで反映されます。 -->
+        <div class="access__map">
+          <iframe
+            title="Mofuu 店舗地図"
+            src="https://www.google.com/maps?q=%E6%A8%AA%E6%B5%9C%E6%B8%AF&output=embed"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div class="access__text">
+          <p><strong>猫カフェ Mofuu（もふぅ）</strong></p>
+          <p>〒231-0023<br>神奈川県横浜市中区山下町○○-○</p>
+          <ul class="access__list">
+            <li>みなとみらい線「元町・中華街」駅 徒歩8分</li>
+            <li>JR根岸線「石川町」駅 徒歩12分</li>
+            <li>お車の場合、近隣コインパーキングをご利用ください</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================================================================
+     FOOTER
+=================================================================== -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="footer__logo-en">MOFUU</span>
+      <span class="footer__logo-ja">猫カフェ もふぅ</span>
+    </div>
+
+    <nav class="footer__nav" aria-label="フッターナビゲーション">
+      <a href="#about">About</a>
+      <a href="#cats">Cats</a>
+      <a href="#menu">Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#information">Information</a>
+      <a href="#access">Access</a>
+    </nav>
+
+    <div class="footer__sns" aria-label="ソーシャルメディアリンク">
+      <!-- SNSリンク（ダミー） -->
+      <a href="https://www.instagram.com/mofuu_catlounge/" target="_blank" rel="noopener noreferrer" aria-label="Instagram（新しいタブで開きます）">Instagram</a>
+      <a href="https://x.com/mofuu_catlounge" target="_blank" rel="noopener noreferrer" aria-label="X（新しいタブで開きます）">X</a>
+    </div>
+
+    <p class="footer__copyright">&copy; <span id="year"></span> MOFUU CAT LOUNGE. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+/* ===================================================================
+   猫カフェ Mofuu — responsive.css
+   -------------------------------------------------------------------
+   スマホ最優先で設計。style.cssのデスクトップレイアウトを
+   タブレット・スマホ向けに段階的に調整する。
+=================================================================== */
+
+/* ---------------------------------------------------------------
+   Tablet: 1024px以下
+--------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .cats__grid { grid-template-columns: repeat(2, 1fr); }
+
+  .about__grid { grid-template-columns: 1fr; }
+  .about__media { max-width: 520px; margin-inline: auto; }
+
+  .information__grid { grid-template-columns: 1fr; }
+
+  .access__grid { grid-template-columns: 1fr; }
+  .access__map { min-height: 320px; }
+
+  .gallery__grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 170px;
+  }
+}
+
+/* ---------------------------------------------------------------
+   Mobile nav: 860px以下でハンバーガーに切り替え
+--------------------------------------------------------------- */
+@media (max-width: 860px) {
+  .hamburger { display: flex; }
+
+  .nav {
+    position: fixed;
+    inset: 0 0 0 auto;
+    width: min(80vw, 340px);
+    height: 100vh;
+    background: var(--color-base);
+    padding: 100px 34px 40px;
+    transform: translateX(100%);
+    transition: transform var(--dur-mid) var(--ease-soft);
+    box-shadow: -10px 0 30px rgba(0,0,0,0.08);
+  }
+  .nav.is-open { transform: translateX(0); }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 26px;
+  }
+  .nav__link { color: var(--color-text) !important; font-size: 1.05rem; }
+  .nav__link--cta {
+    color: var(--color-green) !important;
+    border-color: var(--color-green);
+  }
+
+  /* ハンバーガーの×アニメーション */
+  .hamburger.is-active .hamburger__line:nth-child(1) { transform: translateY(7.5px) rotate(45deg); }
+  .hamburger.is-active .hamburger__line:nth-child(2) { opacity: 0; }
+  .hamburger.is-active .hamburger__line:nth-child(3) { transform: translateY(-7.5px) rotate(-45deg); }
+
+  /* メニュー展開中は開いたハンバーガーの色を本文色に固定 */
+  .header.nav-open .hamburger__line { background: var(--color-text); }
+}
+
+/* ---------------------------------------------------------------
+   Small tablet / large phone: 768px以下
+--------------------------------------------------------------- */
+@media (max-width: 768px) {
+  :root { --section-pad: clamp(64px, 14vw, 100px); }
+
+  .hero { width: 100%; aspect-ratio: auto; min-height: 100svh; }
+  .hero__img { --hero-scale: 1; object-position: center center; }
+  .hero__title { font-size: clamp(2rem, 8vw, 2.6rem); }
+  .hero__actions { flex-direction: column; width: 100%; }
+  .hero__actions .btn { width: 100%; }
+
+  .cats__grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .cat-card__body { padding: 16px 16px 20px; }
+
+  .menu__lists { grid-template-columns: 1fr; gap: 48px; }
+
+  .gallery__grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 160px;
+  }
+
+  .plan-table__row { padding: 14px 18px; }
+
+  .footer__nav { gap: 16px 22px; }
+}
+
+/* ---------------------------------------------------------------
+   Mobile: 480px以下
+--------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .header__inner { padding-inline: 20px; }
+  .container { padding-inline: 20px; }
+
+  .cats__grid { grid-template-columns: 1fr; }
+  .gallery__grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 140px; }
+  .gallery__item--tall { grid-row: span 2; }
+
+  .info-table__row { grid-template-columns: 1fr; gap: 4px; }
+
+  .modal { padding: 16px; }
+  .modal__close { top: 12px; right: 14px; font-size: 1.8rem; }
+  .modal__nav { font-size: 1.1rem; padding: 10px; }
+}
+
+/* ---------------------------------------------------------------
+   Large desktop: 1440px以上（余白を少し広げる）
+--------------------------------------------------------------- */
+@media (min-width: 1440px) {
+  :root { --container-w: 1280px; }
+}

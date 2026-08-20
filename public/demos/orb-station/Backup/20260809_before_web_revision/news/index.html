@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 【解説】検索結果に表示されるタイトル。下層ページであることを明確にします -->
+    <title>お知らせ ・ コラム一覧 | ORB STATION（オーブステーション）</title>
+
+    <!-- 【解説】制作中のため検索エンジンに載らないようにします -->
+    <meta name="robots" content="noindex" />
+
+    <!-- google-fonts：トップと同じフォント（明朝体＋ゴシック体）を読み込みます -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- 【初心者ポイント：相対パス】
+         newsフォルダから見たとき、CSSは1つ上の階層（../）のassetsフォルダの中にあります。
+    -->
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <!-- ① ヘッダー：共通パーツ。ロゴのリンク先も「../index.html」にしてトップに戻れるようにします -->
+    <header class="header">
+      <div class="header__inner inner">
+        <h1 class="header__logo">
+          <a href="../index.html">ORB STATION</a>
+        </h1>
+        
+        <div class="header__contact-box visible-pc">
+          <p class="header__tel">📞 03-1234-5678</p>
+          <p class="header__time">受付 10:00〜18:00（火曜定休）</p>
+        </div>
+
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li><a href="../index.html#about">音声療法とは</a></li>
+            <li><a href="../index.html#service">サービス紹介</a></li>
+            <li><a href="../index.html#profile">代表紹介</a></li>
+            <li><a href="../index.html#voice">お客様の声</a></li>
+            <li><a href="../index.html#news">お知らせ</a></li>
+          </ul>
+          <a href="../contact/index.html" class="header__button">📅 予約する</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- スマホ用メニューボタン -->
+    <button class="drawer-icon js-menu-button">
+      <span class="drawer-icon__bar"></span>
+      <span class="drawer-icon__bar"></span>
+      <span class="drawer-icon__bar"></span>
+    </button>
+
+    <div role="navigation" class="drawer js-drawer">
+      <div class="drawer__body">
+        <ul class="drawer__list">
+          <li><a href="../index.html">トップ</a></li>
+          <li><a href="../index.html#about">音声療法とは</a></li>
+          <li><a href="../index.html#service">サービス紹介</a></li>
+          <li><a href="../contact/index.html">予約・問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+
+<!-- 修正箇所：メインコンテンツ部分 -->
+<main class="main">
+  <!-- 下層メインビジュアル -->
+  <div class="lower-first-view js-fade">
+    <h1 class="lower-first-view__title">お知らせ ・ コラム</h1>
+  </div>
+
+  <!-- パンくずリスト -->
+  <div class="breadcrumb">
+    <div class="breadcrumb__inner inner">
+      <div class="breadcrumb__body">
+        <span><a href="../index.html"><span>TOP</span></a></span>
+        <span class="gt">&gt;</span>
+        <span><span>お知らせ ・ コラム一覧</span></span>
+      </div>
+    </div>
+  </div>
+
+  <section class="lower-news section">
+    <div class="lower-news__inner inner">
+      <div class="lower-news__container">
+        
+        <!-- アイテム1：セミナー -->
+        <a href="./detail/index.html" class="lower-news-item js-fade">
+          <div class="lower-news-item__meta">
+            <time datetime="2025-05-20" class="lower-news-item__date">2025.05.20</time>
+            <div class="lower-news-item__category lower-news-item__category--seminar">セミナー</div>
+          </div>
+          <div class="lower-news-item__content">
+            <h2 class="lower-news-item__title">セミナー開催のお知らせ：本来の自分に出会う声のワークショップ</h2>
+            <span class="lower-news-item__arrow"></span>
+          </div>
+        </a>
+
+        <!-- アイテム2：お知らせ -->
+        <a href="./detail/index.html" class="lower-news-item js-fade delay-200">
+          <div class="lower-news-item__meta">
+            <time datetime="2025-05-01" class="lower-news-item__date">2025.05.01</time>
+            <div class="lower-news-item__category lower-news-item__category--info">お知らせ</div>
+          </div>
+          <div class="lower-news-item__content">
+            <h2 class="lower-news-item__title">ゴールデンウィーク期間中の休業日について</h2>
+            <span class="lower-news-item__arrow"></span>
+          </div>
+        </a>
+
+        <!-- アイテム3：コラム -->
+        <a href="./detail/index.html" class="lower-news-item js-fade delay-400">
+          <div class="lower-news-item__meta">
+            <time datetime="2025-04-18" class="lower-news-item__date">2025.04.18</time>
+            <div class="lower-news-item__category lower-news-item__category--column">コラム</div>
+          </div>
+          <div class="lower-news-item__content">
+            <h2 class="lower-news-item__title">【新着コラム】声の不調とストレスの関係：声から心を整える方法</h2>
+            <span class="lower-news-item__arrow"></span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+</main>
+
+    <!-- フッター -->
+    <footer class="footer">
+      <div class="footer__logo">ORB STATION</div>
+      <div class="footer__address">〒000-0000 東京都新宿区◯◯町 0-0-0</div>
+      <div class="footer__hours">営業時間: 10:00〜18:00 (火曜定休)</div>
+      <div class="footer__copyright">
+        &copy; 2025 ORB STATION All Rights Reserved.
+      </div>
+    </footer>
+
+    <!-- トップへ戻るボタン：パスの「../」忘れに注意 -->
+    <a href="#" class="page-top js-page-top">
+      <img src="../assets/img/page-top.png" alt="トップへ戻る" width="48" height="48" />
+    </a>
+
+    <!-- JSの読み込み -->
+    <script src="../assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>

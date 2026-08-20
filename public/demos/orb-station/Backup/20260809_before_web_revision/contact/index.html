@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- 【解説：タイトル】お問い合わせページであることを明記し、検索結果での視認性を高めます -->
+    <title>ご予約・お問い合わせ | ORB STATION（オーブステーション）</title>
+    <meta name="description" content="セッションのご予約や音声療法士養成講座に関するお問い合わせはこちらから承ります。">
+
+    <!-- noindex：制作中のため検索エンジンに登録されないようにします -->
+    <meta name="robots" content="noindex" />
+
+    <!-- google-fonts：トップページと同じフォント（明朝体＋ゴシック体）を読み込みます -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@500;700&family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet" />
+
+    <!-- 【解説：相対パス】
+         このファイルは「contact」フォルダ内にあるため、1つ上の階層にある「assets」フォルダを指定するには
+         冒頭に「../」をつける必要があります。
+    -->
+    <link rel="stylesheet" href="../assets/css/reset.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
+    <!-- ① ヘッダー：共通パーツ（トップページと構成を合わせています） -->
+    <header class="header">
+      <div class="header__inner inner">
+        <h1 class="header__logo">
+          <!-- リンク先も「../index.html」にして、トップに戻れるようにします -->
+          <a href="../index.html">ORB STATION</a>
+        </h1>
+        
+        <!-- PC版のみ表示：電話番号と受付時間（安心感を出す要素） -->
+        <div class="header__contact-box visible-pc">
+          <p class="header__tel">📞 03-1234-5678</p>
+          <p class="header__time">受付 10:00〜18:00（火曜定休）</p>
+        </div>
+
+        <nav class="header__nav">
+          <ul class="header__list">
+            <!-- アンカーリンク（#）の前に「../index.html」をつけることで、別ページからも正しく各セクションへ飛べます -->
+            <li><a href="../index.html#about">音声療法とは</a></li>
+            <li><a href="../index.html#service">サービス紹介</a></li>
+            <li><a href="../index.html#profile">代表紹介</a></li>
+            <li><a href="../index.html#voice">お客様の声</a></li>
+          </ul>
+          <!-- 【修正】このページ自体が予約フォームなので、フォーム部分へスクロールするリンクに変更 -->
+          <a href="#form" class="header__button">📅 予約する</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- SP用メニューボタン -->
+    <button class="drawer-icon js-menu-button">
+      <span class="drawer-icon__bar"></span>
+      <span class="drawer-icon__bar"></span>
+      <span class="drawer-icon__bar"></span>
+    </button>
+
+    <!-- SP用ドロワーメニュー -->
+    <div role="navigation" class="drawer js-drawer">
+      <div class="drawer__body">
+        <ul class="drawer__list">
+          <li><a href="../index.html">トップ</a></li>
+          <li><a href="../index.html#about">音声療法とは</a></li>
+          <li><a href="../index.html#service">サービス紹介</a></li>
+          <li><a href="../news/index.html">お知らせ</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <main class="main">
+      <!-- 下層ページ専用のメインビジュアル（ヒーローエリア） -->
+      <div class="lower-first-view">
+        <div class="lower-first-view__title">ご予約・お問い合わせ</div>
+      </div>
+
+      <!-- パンくずリスト：ユーザーがいまどこにいるかを示すガイド -->
+      <div class="breadcrumb">
+        <div class="breadcrumb__inner inner">
+          <div class="breadcrumb__body">
+            <span>
+              <a href="../index.html"><span>TOP</span></a>
+            </span>
+            <span class="gt">&gt;</span>
+            <span>
+              <span>ご予約・お問い合わせ</span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- お問い合わせフォームセクション：id="form" を付けてヘッダーの予約ボタンから飛べるようにしています -->
+      <section id="form" class="lower-contact">
+        <div class="lower-contact__inner inner">
+          <div class="lower-contact__area">
+            <div class="form">
+              <div class="form__lists">
+                
+                <!-- 名前入力 -->
+                <div class="form__list">
+                  <div class="form__head">
+                    <label class="form__text" for="your-name">お名前（必須）</label>
+                  </div>
+                  <div class="form__input">
+                    <input type="text" name="your-name" id="your-name" placeholder="山田　太郎" required />
+                  </div>
+                </div>
+
+                <!-- メールアドレス入力 -->
+                <div class="form__list">
+                  <div class="form__head">
+                    <label class="form__text" for="your-email">メールアドレス（必須）</label>
+                  </div>
+                  <div class="form__input">
+                    <input type="email" name="your-email" id="your-email" placeholder="mail@example.com" required />
+                  </div>
+                </div>
+
+                <!-- 電話番号入力 -->
+                <div class="form__list">
+                  <div class="form__head">
+                    <label class="form__text" for="your-tel">お電話番号（必須）</label>
+                  </div>
+                  <div class="form__input">
+                    <input type="tel" name="your-tel" id="your-tel" placeholder="000-0000-0000" required />
+                  </div>
+                </div>
+
+                <!-- 選択項目：企画書のサービス内容に合わせて調整 -->
+                <div class="form__list">
+                  <div class="form__head">
+                    <label class="form__text" for="your-subject">お問い合わせ項目</label>
+                  </div>
+                  <div class="form__input">
+                    <select name="your-subject" id="your-subject">
+                      <option value="セッションのご予約">セッションのご予約</option>
+                      <option value="音声診断のご相談">音声診断のご相談</option>
+                      <option value="ボイスレッスンについて">ボイスレッスンについて</option>
+                      <option value="養成講座の資料請求">養成講座の資料請求</option>
+                      <option value="その他">その他のお問い合わせ</option>
+                    </select>
+                  </div>
+                </div>
+
+                <!-- メッセージ本文 -->
+                <div class="form__list">
+                  <div class="form__head">
+                    <label class="form__text" for="your-message">お問い合わせ内容</label>
+                  </div>
+                  <div class="form__input">
+                    <textarea name="your-message" id="your-message" placeholder="現在のお声のお悩みや、ご予約の希望日時などをご記入ください。"></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 送信ボタン：CSSの --color-main が自動適用されます -->
+              <div class="form__button">
+                <input type="submit" value="上記の内容で送信する" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ⑨ フッター：共通パーツ（情報の整合性を保ちます） -->
+    <footer class="footer">
+      <div class="footer__logo">ORB STATION</div>
+      <div class="footer__address">〒000-0000 東京都新宿区◯◯町 0-0-0</div>
+      <div class="footer__hours">営業時間: 10:00〜18:00 (火曜定休)</div>
+      <div class="footer__copyright">
+        &copy; 2025 ORB STATION All Rights Reserved.
+      </div>
+    </footer>
+
+    <!-- トップへ戻るボタン：パスの「../」忘れに注意 -->
+    <a href="#" class="page-top js-page-top">
+      <img src="../assets/img/page-top.png" alt="トップへ戻る" width="48" height="48" />
+    </a>
+
+    <!-- JavaScript：パスに注意して読み込み -->
+    <script src="../assets/js/lib/swiper-bundle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+  </body>
+</html>
