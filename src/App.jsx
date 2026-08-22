@@ -7,16 +7,15 @@ import SNSCreative from './components/SNSCreative';
 import FeaturedCaseStudy from './components/FeaturedCaseStudy';
 import About from './components/About';
 import Skills from './components/Skills';
-import AICreative from './components/AICreative';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import { worksData } from './data/works';
 
-const filters = ['All', 'Web', 'Graphic', 'SNS'];
+const filters = ['ALL', 'WEB', 'GRAPHIC', 'SNS'];
 
 function App() {
-  const [activeFilter, setActiveFilter] = useState('All');
-  const showCategory = (category) => activeFilter === 'All' || activeFilter === category;
+  const [activeFilter, setActiveFilter] = useState('ALL');
+  const showCategory = (category) => activeFilter === 'ALL' || activeFilter === category.toUpperCase();
 
   useLayoutEffect(() => {
     const revealTargets = Array.from(
@@ -69,12 +68,11 @@ function App() {
           activeFilter={activeFilter}
           onFilterChange={setActiveFilter}
         />
-        {showCategory('Graphic') && <GraphicWorks works={graphicWorks} />}
+        {showCategory('Graphic') && <GraphicWorks works={graphicWorks} aiWorks={aiWorks} />}
         {showCategory('SNS') && <SNSCreative works={snsWorks} />}
         {showCategory('Web') && <FeaturedCaseStudy works={worksData} />}
         <About />
         <Skills />
-        {showCategory('AI Creative') && <AICreative works={aiWorks} />}
         <Contact />
       </main>
       <Footer />

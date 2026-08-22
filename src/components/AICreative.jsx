@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import { assetPath } from '../utils/assetPath';
 
-function AICreative({ works }) {
+function AICreative({ works, embedded = false }) {
   const [selectedWork, setSelectedWork] = useState(null);
   const closeButtonRef = useRef(null);
 
@@ -31,14 +31,20 @@ function AICreative({ works }) {
   }, [selectedWork]);
 
   const closeModal = () => setSelectedWork(null);
+  const Wrapper = embedded ? 'div' : 'section';
+  const wrapperClassName = embedded ? 'graphic-ai-visuals' : 'section section--ai';
+  const headingClassName = embedded ? 'subsection-heading' : 'section-heading';
+  const heading = embedded ? 'AI Visual / Pet Creative' : 'AI Creative';
+  const eyebrow = embedded ? 'AI Visual' : 'Supporting Practice';
+  const galleryLabel = embedded ? 'AI Visual / Pet Creative作品一覧' : 'AI Creative作品一覧';
 
   return (
-    <section className="section section--ai" id="ai-creative">
+    <Wrapper className={wrapperClassName} id={embedded ? 'ai-visual-pet-creative' : 'ai-creative'}>
       <div className="container">
-        <p className="eyebrow">Supporting Practice</p>
-        <h2 className="section-heading">AI Creative</h2>
+        <p className="eyebrow">{eyebrow}</p>
+        <h2 className={headingClassName}>{heading}</h2>
         <p className="section-intro">AIを企画・表現・制作の幅を広げるツールとして活用しています。</p>
-        <div className="ai-gallery" role="list" aria-label="AI Creative作品一覧">
+        <div className="ai-gallery" role="list" aria-label={galleryLabel}>
           {works.map((work) => (
             <button
               className="ai-gallery__item"
@@ -91,7 +97,7 @@ function AICreative({ works }) {
           </div>
         </div>
       ) : null}
-    </section>
+    </Wrapper>
   );
 }
 
